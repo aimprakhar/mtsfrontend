@@ -6,7 +6,7 @@ import { SearchItem } from '../searchItem/SearchItem';
 
 export const Featuredd = () => {
     const bt =false;
-    const {data,loading,error,reFetch}=useFetch(`http://localhost:8700/api/hotels/find?verified=${bt}`);
+    const {data,loading,error,reFetch}=useFetch(`https://mtsbackend.onrender.com/api/hotels/find?verified=${bt}`);
     // console.log(data);
 
 
@@ -17,9 +17,11 @@ export const Featuredd = () => {
 
 {loading?("loading"):(
  <>
+
  {data.map(item=>(
   <SearchItem item={item} key={item._id}/>
  ))}
+  <h1>Thats All </h1>
  </>
 
 )}

@@ -29,10 +29,9 @@ export const List = () => {
 // }
 
 
-   const {data,loading,error,reFetch}=useFetch(`http://localhost:8700/api/hotels/find?From=${startLocation}&To=${destination}`);
+   const {data,loading,error,reFetch}=useFetch(`https://mtsbackend.onrender.com/api/hotels/find?From=${startLocation}&To=${destination}`);
   
 
- 
   // &min=${min||1}&max=${max||9999}
 
   const handleBtnCLick=()=>{
