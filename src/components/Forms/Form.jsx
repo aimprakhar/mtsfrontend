@@ -26,7 +26,7 @@ const Form =() => {
     setBtn("SUBMITTING YOUR DETAILS");
     event.preventDefault();
  
-   try{const res=await axios.post("http://localhost:8700/api/hotels",inputs);
+   try{const res=await axios.post("https://mtsbackend.onrender.com/api/hotels",inputs);
    navigate("/FormSuccess", {state:{inputs}})
 }
    catch(err){
@@ -44,7 +44,7 @@ const call1=()=>{
   return (
     <> 
     <Nav/>
-   <Navbar/>
+   {/* <Navbar/> */}
    <Header type="list" />
 
 
@@ -102,8 +102,13 @@ const call1=()=>{
     </div>
    
 {/* --------------------------------------------------------------------------- */}
-<button onClick={call1} className="btn btn2" type="reset">Reset</button>
-<button onClick={call2} className="btn" type="submit">{btn}</button>
+<div className="btnn">
+<button onClick={call1} className="btn1" type="reset">Reset</button>
+<button onClick={call2} className="btn2" type="submit">{btn}</button>
+</div>
+
+{/* <button onClick={call1} className="btn btn2" type="reset">Reset</button>
+<button onClick={call2} className="btn" type="submit">{btn}</button> */}
 </form>
 </div>
 </>

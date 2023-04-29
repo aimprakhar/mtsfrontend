@@ -5,6 +5,7 @@ import "./forms.css"
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useLocation } from 'react-router-dom'
+import Nav from '../Nav/Nav'
 const FormSuccess = () => {
     const location = useLocation();
     const inputs=useState(location.state.inputs)
@@ -12,7 +13,7 @@ const FormSuccess = () => {
    
   return (
     <>
-    <Navbar/>
+    <Nav/>
    <Header type="list" />
    <div className="success">
    

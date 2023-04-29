@@ -5,7 +5,8 @@
     margin-right: auto;
     width: 20%;
     padding :0.2%;
-    width:max-content
+    width:max-content;
+    margin-top:5rem
    
 }
 
@@ -15,10 +16,10 @@
     height:50px;
 
 }
-form{
+/* form{
   
     margin-top: 1%;
-}
+} */
 input{
     border:2px solid red;
     height:30px;
@@ -26,19 +27,31 @@ input{
     width:max-content;
     float:right
 }
-.btn{
- 
+.btn1{
+     flex:1;
+   
     text-align: center;
-    background-color: cyan;
+    background-color: rgb(232, 99, 99);
     height:40px;
-    width:100%;
+    /* width:30%; */
     border-radius: 10px;
    margin-top: 1%;
 }
+.btnn{
+    margin-top: 6vh;
+    display: flex;
+    gap:5px
+}
 .btn2{
+    flex:5;
  
-   
-    margin-top:3%;
+    text-align: center;
+    background-color: rgb(31, 195, 31);
+    height:40px;
+    /* width:60%; */
+    border-radius: 10px;
+   margin-top: 1%;
+
 }
 
 textarea{
@@ -50,7 +63,7 @@ border-radius: 5px;;
 }
 .success{
    
-
+margin-top: 12vh;
     margin-left: auto;
     margin-right: auto;
     width:max-content

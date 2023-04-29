@@ -23,13 +23,13 @@ const Nav = () => {
 
 
   {/* <label htmlFor="" >MyPrakhar</label> */}
-  <Link to="/">
+  <Link style={{textDecoration:"none"}} to="/">
   <label className="Nav_logo">MyTripSaathi.com</label>
   </Link>
  
   <ul>
   <li>
-        <a href="/">Create a Trip</a>
+        <a href="/form">Create a Trip</a>
     </li>
     <li>
         <a href="/">Delete a Trip</a>

@@ -94,6 +94,9 @@ export const List = () => {
              {data.map(item=>(
               <SearchItem item={item} key={item._id}/>
              ))}
+             <span className="finished"> 
+             Thats all from database
+             </span>
              </>
 
             )}

@@ -12,7 +12,7 @@ margin-top: 20px;
     display: flex;
     gap:20px;
     padding:1%;
-    margin-top: 5vh;
+    margin-top: 6vh;
     /* background-color: red; */
     /* flex-direction: column; */
 
@@ -113,7 +113,10 @@ margin-top: 20px;
     
     }
 }
+.finished{
 
+    margin-left: 20vw;
+} 
 
 
 
