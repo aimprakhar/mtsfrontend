@@ -1,0 +1,80 @@
+
+.formContainer{
+    border:2px solid red;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    padding :0.2%;
+    width:max-content
+   
+}
+
+
+
+.form-control{
+    height:50px;
+
+}
+form{
+  
+    margin-top: 1%;
+}
+input{
+    border:2px solid red;
+    height:30px;
+    border-radius: 5px;;
+    width:max-content;
+    float:right
+}
+.btn{
+ 
+    text-align: center;
+    background-color: cyan;
+    height:40px;
+    width:100%;
+    border-radius: 10px;
+   margin-top: 1%;
+}
+.btn2{
+ 
+   
+    margin-top:3%;
+}
+
+textarea{
+width:35%;
+border:2px solid red;
+float:right;
+
+border-radius: 5px;;
+}
+.success{
+   
+
+    margin-left: auto;
+    margin-right: auto;
+    width:max-content
+ 
+}
+h4{
+  
+    background-color: pink;
+    width:90vw;
+    padding:2px;
+   overflow-x:scroll;
+
+}
+
+.check{
+ color:green;
+ font-weight:bold;
+ font-size: 2rem;
+}
+
+.span{
+    color:red;
+}
+.maindivv{
+width:max-content;
+font-size: 0.7rem ;
+}
