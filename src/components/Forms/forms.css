@@ -1,13 +1,23 @@
 
 .formContainer{
-    border:2px solid red;
+  
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 1rem;;
+    
     width: 20%;
     padding :0.2%;
     width:max-content;
-    margin-top:5rem
+    margin-top:5rem;
+    background-color:rgb(206, 245, 245);
    
+
+
+    border:0.1rem solid #dd4a4c;
+    border-bottom: 0.4rem solid #dd4a4c;
+    border-radius: 0.8rem;
+    box-shadow: 0.25rem 0.50rem rgba(0,0,0,.15)!important;
+
 }
 
 
@@ -23,7 +33,7 @@
     margin-top: 1%;
 } */
 .form>form input{
-    border:2px solid red;
+    border:0.01rem solid red;
     height:30px;
     border-radius: 5px;;
     width:70%;
@@ -33,7 +43,7 @@
      flex:1;
    color:white;
     text-align: center;
-    background-color: rgb(232, 99, 99);
+    background-color: #dd4a4c;
     height:40px;
     /* width:30%; */
     border-radius: 10px;
@@ -53,12 +63,13 @@
     /* width:60%; */
     border-radius: 10px;
    margin-top: 1%;
+   color:black;
 
 }
 
 textarea{
 width:35%;
-border:2px solid red;
+border:0.01rem solid #dd4a4c;
 float:right;
 
 border-radius: 5px;;

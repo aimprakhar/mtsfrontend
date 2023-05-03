@@ -15,7 +15,7 @@
 .Nav>nav{
     position: fixed;
   z-index: 100;
-    background:blue ;
+    background:rgb(89, 89, 241) ;
     height:80px;
     width:100vw;
 }

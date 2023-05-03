@@ -9,7 +9,8 @@
     /* background-color: #800042; */
     /* background-color: rgb(249, 66, 97); */
     /* background-image: linear-gradient(to bottom right,rgb(249, 66, 97),rgb(249, 66, 47),rgb(249, 66, 97)); */
-    background-image: linear-gradient(to bottom right,rgb(249, 116, 138),rgb(249, 91, 73),rgb(249, 116, 138));
+    background-image: linear-gradient(to bottom,#dd4a4c,#ec696b,#dd4a4c);
+
     
     color:white;
     display:flex;
