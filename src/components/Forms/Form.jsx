@@ -7,6 +7,8 @@ import { Header } from '../header/Header';
 import { Navbar } from '../Navbar';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Nav from '../Nav/Nav';
+import PulseLoader from "react-spinners/PulseLoader";
+
 
 const Form =() => {
   
@@ -15,6 +17,7 @@ const Form =() => {
    const navigate=useNavigate();
   const [inputs, setInputs] = useState({});
   const [btn,setBtn]=useState("Create Your Trip");
+  const [spinner,Onspinner]=useState(false);
 
   const handleChange = (event) => {
     const name = event.target.name;
@@ -23,13 +26,18 @@ const Form =() => {
   }
 
   const call2 = async(event) => {
-    setBtn("SUBMITTING YOUR DETAILS");
+    setBtn("");
+    Onspinner(true);
+   
     event.preventDefault();
  
    try{const res=await axios.post("https://mtsbackend.onrender.com/api/hotels",inputs);
    navigate("/FormSuccess", {state:{inputs}})
 }
    catch(err){
+    Onspinner(false);
+    setBtn("RESUBMIT");
+    alert("Form Details are incorrect")
         console.log("error found" );
         console.log(err );
    }
@@ -107,7 +115,7 @@ const call1=()=>{
 {/* --------------------------------------------------------------------------- */}
 <div className="btnn">
 <button onClick={call1} className="btn1" type="reset">Reset</button>
-<button onClick={call2} className="btn2" type="submit">{btn}</button>
+<button onClick={call2} className="btn2" type="submit">{btn} { spinner&&<PulseLoader color="#36d7b7" />}</button>
 </div>
 
 {/* <button onClick={call1} className="btn btn2" type="reset">Reset</button>

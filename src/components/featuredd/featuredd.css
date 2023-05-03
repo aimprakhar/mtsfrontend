@@ -42,5 +42,24 @@ left:20px;
 }
 
 
+.RingLoader>span{
+   
+    margin-left: auto;
+    margin-right: auto;
+    /* background-color: pink; */
+    margin-top: 1rem;
+    
+}
+.RingLoader>p{
+   display: block;
+   width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    /* background-color: pink; */
+    margin-top: 1rem;
+    
+}
+
+
 
 
