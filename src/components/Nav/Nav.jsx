@@ -29,7 +29,7 @@ const Nav = () => {
  
   <ul>
   <li>
-        <a href="/form">Create a Trip</a>
+        <Link to="/form">Create a Trip</Link>
     </li>
     <li>
         <a href="/">Delete a Trip</a>
