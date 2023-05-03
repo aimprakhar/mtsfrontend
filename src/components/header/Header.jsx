@@ -10,6 +10,7 @@ import { format } from 'date-fns';
 import { useNavigate } from 'react-router-dom';
 import { SearchContext } from '../../context/SearchContext';
 import { AuthContext } from '../../context/AuthContext';
+import img from "./baby.png"
 
 
 
@@ -98,11 +99,16 @@ export const Header = ({type}) => {
 </div>
 {/* //start/// */}
 {type !=="list" &&<>
+<div className='jhjh'>
+  
+<img src={img} alt="" className='pngImg'/>
+
 <div className='signUp'> 
 <h1 className='headerTitle'>A lifetime of discounts? Its genuine</h1>
 <p className='headerDesc'>get rewarded for your travel - unlock instant saving of 10% or more with a free AIM Booking </p>
 {!user&&<button onClick={login} className="headerBtn1">Signin / Register</button>}
 
+</div>
 </div>
 <div className='headerSearch'>
     {/* ------------------------------------------------------- */}

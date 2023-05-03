@@ -2,6 +2,7 @@ import React from 'react'
 import {useNavigate } from 'react-router-dom';
 import "./searchItem.css"
 import { Link } from 'react-router-dom';
+import p from "./png1.png"
 
 export const SearchItem = ({item}) => {
   const navigate =useNavigate();
@@ -9,7 +10,12 @@ export const SearchItem = ({item}) => {
     navigate("/hotels/find");
  }
 
-  const p="https://media.istockphoto.com/id/1164435677/photo/happy-hotel-clerks-are-welcoming-professional-at-counter.jpg?s=612x612&w=0&k=20&c=XNbtAFwGK4AHd7JKKQycDwTQcIXFagIxt9TXLNb0Dd4=";
+  // var p="https://media.istockphoto.com/id/1164435677/photo/happy-hotel-clerks-are-welcoming-professional-at-counter.jpg?s=612x612&w=0&k=20&c=XNbtAFwGK4AHd7JKKQycDwTQcIXFagIxt9TXLNb0Dd4=";
+
+// const p=png1;
+
+
+
 
   return (
     

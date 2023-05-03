@@ -10,7 +10,8 @@
     /* background-color: rgb(249, 66, 97); */
     /* background-image: linear-gradient(to bottom right,rgb(249, 66, 97),rgb(249, 66, 47),rgb(249, 66, 97)); */
     background-image: linear-gradient(to bottom,#dd4a4c,#ec696b,#dd4a4c);
-
+    /* background-image:white; */
+opacity: 99%;
     
     color:white;
     display:flex;
@@ -25,7 +26,7 @@
  .headerContainer{
 width:100vw;
 max-width:1024px;
- margin:20px 0px 100px 0px;
+ margin:20px 0px 70px 0px;
 }
 
 .listMode{
@@ -238,3 +239,20 @@ color:rgb(11, 11, 11);
     margin-left: 5px;;
 }
 
+
+
+.pngImg{
+    /* position: relative;
+   top: 0.001vh;
+    left: 0.01vw; */
+
+    height:50vh;
+    z-index: -1;;
+}
+
+.jhjh{
+    display: flex;
+    justify-content: space-between;
+    padding-right:2%;
+
+}

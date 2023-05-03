@@ -25,9 +25,9 @@ export const Home = () => {
         <h1 className='homeTitle'>Home Guests Love</h1>
          <FeaturedProperties/> 
         <MailList/>
-        <Footer/>
+        // <Footer/>
        </div> */}
-
+       <Footer/>  
     </div>
     // <div>home</div>
   )
