@@ -31,9 +31,9 @@ const Nav = () => {
   <li>
         <Link to="/form">Create a Trip</Link>
     </li>
-    <li>
+    {/* <li>
         <a href="/">Delete a Trip</a>
-    </li>
+    </li> */}
     <li>
         <a href="/">Edit a Trip</a>
     </li>

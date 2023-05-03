@@ -15,7 +15,7 @@
 .Nav>nav{
     position: fixed;
   z-index: 100;
-    background:rgb(89, 89, 241) ;
+    background:#2962ff;
     height:80px;
     width:100vw;
 }
@@ -49,15 +49,17 @@
     color:white;
     font-size: 1.0rem;
     text-transform: uppercase;
-    padding:0px 13px;
+    padding:0px 5px;
     border-radius: 3px;
     text-decoration: none;
+    margin:1rem;
 
 }
 
 .Nav>a.active,a:hover{
-    background-color: #dd4a4c;
+    border-bottom: 2px solid #dd4a4c;
     transition:0.5s;
+    color:white;
 }
 
 .Nav_checkbtn{
@@ -97,7 +99,9 @@
     position: fixed;
     width:100%;
     height:100vh;
-    background-image: linear-gradient(to bottom right,rgb(249, 116, 138),rgb(249, 91, 73),rgb(249, 116, 138));
+    /* background-image: linear-gradient(to bottom right,rgb(249, 116, 138),rgb(249, 91, 73),rgb(249, 116, 138)); */
+    background-image: linear-gradient(to bottom right,#2962ff,rgb(49, 148, 219),#2962ff);
+    /* background-color:#2962ff; */
     top:65px;
      /* right:2px; */
     left:-100%;
