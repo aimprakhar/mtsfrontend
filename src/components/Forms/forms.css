@@ -14,22 +14,24 @@
 
 .form-control{
     height:50px;
+    display: flex;
+    justify-content: space-between;
 
 }
 /* form{
   
     margin-top: 1%;
 } */
-input{
+.form>form input{
     border:2px solid red;
     height:30px;
     border-radius: 5px;;
-    width:max-content;
+    width:70%;
     float:right
 }
 .btn1{
      flex:1;
-   
+   color:white;
     text-align: center;
     background-color: rgb(232, 99, 99);
     height:40px;
@@ -90,4 +92,33 @@ h4{
 .maindivv{
 width:max-content;
 font-size: 0.7rem ;
+}
+
+
+
+
+@media (max-width:500px) {
+    .form-control{
+       flex-direction: column;
+   margin-left:auto;
+   margin-right:auto;
+    
+    }
+
+    .formContainer{
+     text-align: center;
+        width: 95%;
+     
+       
+    }
+
+    .form>Form input,textarea{
+        margin-left: auto;
+        margin-right: auto;
+    }
+/* 
+    form{
+       width:90%;
+    } */
+   
 }

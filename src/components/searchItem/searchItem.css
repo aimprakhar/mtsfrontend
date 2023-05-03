@@ -6,7 +6,8 @@
 
    background-color: rgb(177, 236, 236);
 padding: 10;
-/* border-radius: 5px; */
+border:2px solid red;
+border-radius: 5px;
 display: flex;
 /* justify-content: space-between;
 gap:20px; */

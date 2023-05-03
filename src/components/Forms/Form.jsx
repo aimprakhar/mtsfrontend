@@ -43,7 +43,8 @@ const call1=()=>{
 
   return (
     <> 
-    <Nav/>
+
+     <Nav/>
    {/* <Navbar/> */}
    <Header type="list" />
 
@@ -53,7 +54,9 @@ const call1=()=>{
 
 
 <div className="formContainer">
-    <form>
+
+    <div className="form">
+     <form>
 {/* --------------------------------------------------------------------------- */}
     <div className="form-control">
         <label htmlFor="name1">Full Name</label>
@@ -111,6 +114,7 @@ const call1=()=>{
 <button onClick={call2} className="btn" type="submit">{btn}</button> */}
 </form>
 </div>
+</div> 
 </>
   )
 }
