@@ -10,6 +10,7 @@ import { Navbar } from '../../components/Navbar'
 import { AuthContext } from '../../context/AuthContext'
 import { SearchContext } from '../../context/SearchContext'
 import "./hotels.css"
+import Nav from '../../components/Nav/Nav'
 export const Hotels = () => {
 
   const [slideNumber,setSlideNumber]=useState(0);
@@ -42,20 +43,21 @@ const location=useLocation();
   const id=location.pathname.split("/")[3];
 
 
-   const{data,loading,error}=useFetch(`https://backend-54ic.onrender.com/api/hotels/find/${id}`);
+   const{data,loading,error}=useFetch(`https://backend-54ic.onrender.com/api/hotels/find/6415f7ef33f016bd8b3c6fa5`);
    const {dates}=useContext(SearchContext);
 
    const {user}=useContext(AuthContext);
    const navigate=useNavigate();
    const MILLISECONDS_PER_DAY=1000*60*60*24;
 
-   function dayDifference(date1,date2){
-    const timeDiff=Math.abs(date2.getTime()-date1.getTime());
-    const diffDays=Math.ceil(timeDiff/MILLISECONDS_PER_DAY);
-     return diffDays;
-  }
+  //  function dayDifference(date1,date2){
+  //   const timeDiff=Math.abs(date2.getTime()-date1.getTime());
+  //   const diffDays=Math.ceil(timeDiff/MILLISECONDS_PER_DAY);
+  //    return diffDays;
+  // }
 
-   const days=dayDifference(dates[0].endDate,dates[0].startDate);
+  //  const days=dayDifference(dates[0].endDate,dates[0].startDate);
+  const days=7;
   //  const handle2=()=>{
     
   
@@ -73,7 +75,8 @@ const location=useLocation();
 
   return (
     <div className=''>
-      <Navbar/>
+      <Nav/>
+      {/* <Navbar/> */}
       <Header type="list"/>
 
       {loading?("loading"):(

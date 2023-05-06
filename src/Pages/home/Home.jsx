@@ -27,6 +27,7 @@ export const Home = () => {
         <MailList/>
         // <Footer/>
        </div> */}
+        <MailList/>
        <Footer/>  
     </div>
     // <div>home</div>

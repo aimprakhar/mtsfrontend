@@ -3,6 +3,8 @@ import useFetch from '../hooks/useFetch'
 import "./featuredd.css"
 import { SearchItem } from '../searchItem/SearchItem';
 import RingLoader from "react-spinners/RingLoader";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 
 
 export const Featuredd = () => {
@@ -19,7 +21,7 @@ export const Featuredd = () => {
    
 {loading?(
   <div className="RingLoader">
-<RingLoader color="#36d7b7" size="100" />
+<RingLoader color="#36d7b7" size="100px" />
 <p >Loading...</p>
 
 
@@ -29,11 +31,14 @@ export const Featuredd = () => {
  
   ):(
  <>
+<span className='ghotu'>Featured Trips <FontAwesomeIcon icon={faArrowDown} className="headerIcon"/></span>
 
- {data.map(item=>(
+ {
+
+ data.map(item=>(
   <SearchItem item={item} key={item._id}/>
  ))}
-  <h1>Thats All </h1>
+  <h1 className='thatsall'>Thats All From Database</h1>
  </>
 
 )}

@@ -8,6 +8,7 @@ import { Navbar } from '../Navbar';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Nav from '../Nav/Nav';
 import PulseLoader from "react-spinners/PulseLoader";
+import { Footer } from '../Footer/Footer';
 
 
 const Form =() => {
@@ -123,6 +124,7 @@ const call1=()=>{
 </form>
 </div>
 </div> 
+<Footer/>
 </>
   )
 }

@@ -3,6 +3,8 @@ import {useNavigate } from 'react-router-dom';
 import "./searchItem.css"
 import { Link } from 'react-router-dom';
 import p from "./png1.png"
+import { faIndianRupee } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const SearchItem = ({item}) => {
   const navigate =useNavigate();
@@ -35,12 +37,13 @@ export const SearchItem = ({item}) => {
 <div className="siDesc">
 {/* <h1 className="siTitle"><span className='red'>StartLocation</span>:{item.From} <br/><span ><span className='red'>Destination</span>:{item.To}</span></h1> */}
 {/* <span className="siDistance">{item.To} from centre</span> */}
-<span className="siTaxiOp">Mode of Transport :By Road</span>
-<span className="siSubtitle">Trip Organisor: {item.Creater_Name} </span>
-<span className="siCancelOp">Trip Organisor Contact Number: {item.Creater_Mobile_number}</span>
-<span className='siFeatures'>{item.AdditionalDetails}</span>
+<span className="siTaxiOp">Trip Organisor: {item.Creater_Name}</span>
+<span className="siSubtitle">Mode of Transport: ByRoad  </span>
 
-<span className="siCancelOpSubtitle">You can join and leave the trip as per your consent .Trip organisor will finally decide the final fellow people going for</span>
+<span className="siCancelOp">Contact Number: {item.Creater_Mobile_number}</span>
+{/* <span className='siFeatures'>{item.AdditionalDetails}</span> */}
+
+<span className="siCancelOpSubtitle">You can join and leave the trip as per your consent .Trip organisor will finally decide the final fellow people going for trip</span>
 
 
 
@@ -57,10 +60,12 @@ export const SearchItem = ({item}) => {
 } */}
   <div className='siDetailTexts'>
   {/* <span className="siPrice"><span>{item.Date}</span></span> */}
-<span className="siPrice">Expenses {item.AppxTripExpenses}</span>
+<span className="siPrice">Expenses for each:</span>
+<span className="siPrice"><FontAwesomeIcon icon={faIndianRupee} /> {item.AppxTripExpenses}</span>
 {/* <span className="siTaxOp">Includes taxes and fees</span> */}
 
-<Link to={`/hotels/find/${item._id}`}> 
+{/* <Link to={`/hotels/find`}>  */}
+<Link to={`/`}>
 <button className='siCheckButton'>Join the Trip</button>
 </Link>
 

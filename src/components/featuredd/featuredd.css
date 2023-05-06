@@ -35,7 +35,7 @@ left:20px;
 .listResult{
     width:100vw;
     max-width:1224px;
-    margin-top: 16vh;;
+    margin-top: 17vh;;
    margin-left: auto;
    margin-right: auto;
 
@@ -60,6 +60,24 @@ left:20px;
     
 }
 
+.ghotu{
+    display: block;
+    width:max-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:1rem;
+    color:blue;
+    font-weight:bold;
+}
+
+
+.thatsall{
+    display: block;
+    width:max-content;
+    margin-left:auto;
+    margin-right: auto;
+    font-size: small;
+}
 
 
 

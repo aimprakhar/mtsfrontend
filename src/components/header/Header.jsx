@@ -10,12 +10,31 @@ import { format } from 'date-fns';
 import { useNavigate } from 'react-router-dom';
 import { SearchContext } from '../../context/SearchContext';
 import { AuthContext } from '../../context/AuthContext';
-import img from "./baby.png"
+import img1 from "./baby.png"
+import img2 from "./pngy.png"
+import img3 from "./pngy2.png"
+
 
 
 
 
 export const Header = ({type}) => {
+  // const wd = window.innerWidth;
+  const wd = window.screen.width;
+
+ var imgy;
+ var imgyClassName;
+ if(wd<1250){
+  imgy=img2;
+  imgyClassName="small";
+ }
+ else{
+  // imgy=img3;
+  imgy=img3;
+  imgyClassName="large";
+ }
+
+
   const {user}=useContext(AuthContext);
   const [startLocation,setStartLocation]=useState("");
     const [destination,setDestination]=useState("");
@@ -101,14 +120,18 @@ export const Header = ({type}) => {
 {type !=="list" &&<>
 <div className='jhjh'>
   
-<img src={img} alt="" className='pngImg'/>
+<img src={img1} alt="" className='pngImg' />
 
-<div className='signUp'> 
+<img src={imgy} alt="" className={imgyClassName}/>
+
+
+
+{/* <div className='signUp'> 
 <h1 className='headerTitle'>A lifetime of discounts? Its genuine</h1>
 <p className='headerDesc'>get rewarded for your travel - unlock instant saving of 10% or more with a free AIM Booking </p>
 {!user&&<button onClick={login} className="headerBtn1">Signin / Register</button>}
 
-</div>
+</div> */}
 </div>
 <div className='headerSearch'>
     {/* ------------------------------------------------------- */}

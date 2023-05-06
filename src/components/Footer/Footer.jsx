@@ -8,6 +8,8 @@ export const Footer = () => {
    
     //            this is footer
     // </div> */}
+     <div className='fText '>Designed at NIT Agartala</div>
+
     <div className='fText'>Copyright @ 2023 MyTripSaathi.com</div>
      </div>
   )

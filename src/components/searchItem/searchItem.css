@@ -30,7 +30,8 @@ overflow-x:hidden;
     display: flex;
     flex-direction: column;
     gap:10px;
-    flex:2;
+    max-width: 60%
+    /* flex:2; */
 
 }
 .siDetails{
@@ -63,18 +64,21 @@ overflow-x:hidden;
 
 
 .siTaxiOp{
-    font-size: 12px;
+    font-size: 0.8rem;
     background-color: #008009;
     color:white;
     width: max-content;
     padding: 3px;
     border-radius: 5px;
-    max-width: 50%;
+    max-width: 40%;
+    overflow-x: hidden;
+    word-wrap: break-word;
 }
 
 .siSubtitle{
     font-size: 12px;
     font-weight: bold;
+    text-align: start;
 }
 
 
@@ -84,13 +88,16 @@ overflow-x:hidden;
 
 .siCancelOp{
     font-size: 12px;
-    color:#008009;
+    /* color:#008009; */
     font-weight: bold;
+    text-align: start;
 }
 
 .siCancelOpSubtitle{
     font-size: 12px;
     color:#008009; 
+    text-align: start;
+ 
 }
 
 
@@ -116,7 +123,7 @@ border:none;
 text-align: right;
 display: flex;
 flex-direction: column;
-gap:5px;
+justify-content: space-between;
 }
 
 .siPrice{
@@ -135,6 +142,7 @@ color:whitesmoke;
 padding: 10px 5px;
 border:none;
 cursor: pointer;
+margin-top: 10%;
 }
 
 @media(max-width:600px){
@@ -160,8 +168,8 @@ cursor: pointer;
 
         .siTaxiOp{
             /* padding-left: 50%; */
-           margin-left: auto;
-           margin-right: auto;
+           margin-left: 1rem;
+        
         }
 
     .siRating{
@@ -190,10 +198,12 @@ cursor: pointer;
     justify-content: space-around;
 }
 .div13{
-    /* border:2px solid green; */
+    /* box-shadow: -.075rem -0.0075rem 0 0 rgba(0,0,0,.15)!important; */
+    
     display: flex;
  
     margin: 1px;
+    padding:1px;
     height:max-content;
 }
 @media(max-width:300px){
@@ -204,9 +214,10 @@ cursor: pointer;
        flex-direction: column;
 }
 .div12{
-    /* border:2px solid blue; */
+    /* border:12px solid black; */
 
    flex-direction: column;
+   /* justify-content: space-between; */
 }
 
 }

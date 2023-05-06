@@ -15,7 +15,7 @@
 .Nav>nav{
     position: fixed;
   z-index: 100;
-    background:#2962ff;
+    background: #003580;
     height:80px;
     width:100vw;
 }
@@ -26,6 +26,7 @@
     line-height: 80px;
     padding: 0 100px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 
@@ -49,15 +50,21 @@
     color:white;
     font-size: 1.0rem;
     text-transform: uppercase;
-    padding:0px 5px;
+    padding:0 0.5rem;
     border-radius: 3px;
     text-decoration: none;
-    margin:1rem;
+    /* margin:1rem; */
 
 }
 
 .Nav>a.active,a:hover{
     border-bottom: 2px solid #dd4a4c;
+    transition:0.5s;
+    color:white;
+}
+
+.Nav.logo>a:hover{
+    border-bottom: 2px solid yellow;
     transition:0.5s;
     color:white;
 }
@@ -87,11 +94,11 @@
     }
 
    .Nav> nav ul li a{
-        font-size: 16px;
+        font-size: 1rem;
     }
 }
 
-@media (max-width:1350px){
+@media (max-width:1150px){
 .Nav_checkbtn{
     display:block;
 }
