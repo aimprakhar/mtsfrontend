@@ -9,7 +9,8 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import Nav from '../Nav/Nav';
 import PulseLoader from "react-spinners/PulseLoader";
 import { Footer } from '../Footer/Footer';
-
+import { MailList } from '../mailList/MailList';
+let count=0;
 
 const Form =() => {
   
@@ -67,6 +68,10 @@ const call1=()=>{
     <div className="form">
      <form>
 {/* --------------------------------------------------------------------------- */}
+
+
+
+{/* --------------------------------------------------------------------------------- */}
     <div className="form-control">
         <label htmlFor="name1">Full Name</label>
         <input onChange={handleChange} id="name1" name="Creater_Name" type="text" />
@@ -124,6 +129,7 @@ const call1=()=>{
 </form>
 </div>
 </div> 
+<MailList/>
 <Footer/>
 </>
   )

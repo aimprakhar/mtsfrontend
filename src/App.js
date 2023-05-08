@@ -12,6 +12,9 @@ import Error from './Pages/login/Error';
 import Form from './components/Forms/Form';
 import FormSuccess from './components/Forms/FormSuccess';
 import Nav from './components/Nav/Nav';
+import About from './components/about/About';
+import Contact from './components/contact us/Contact';
+import Edit from './components/editdelete/Edit';
 
 
 
@@ -31,6 +34,10 @@ function App() {
      <Route path="/form" element={<Form/>}/>
      <Route path="/formSuccess" element={<FormSuccess/>}/>
      <Route path="/nav" element={<Nav/>}/>
+     <Route path="/about" element={<About/>}/>
+     <Route path="/contact" element={<Contact/>}/>
+     <Route path="/edit" element={<Edit/>}/>
+
     
  
  

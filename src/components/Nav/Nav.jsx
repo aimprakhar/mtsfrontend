@@ -59,19 +59,19 @@ const nav=useNavigate();
         <a href="/">Delete a Trip</a>
     </li> */}
     <li>
-        <a href="/">Edit a Trip</a>
+        <Link to="/edit">Edit/Delete a Trip</Link>
     </li>
    
     
     <li>
-        <a href="/">About Us</a>
+        <Link to="/about">About Us</Link>
     </li>
   
     <li>
-        <a href="/">Contact Us</a>
+        <Link to="/contact">Contact Us</Link>
     </li>
     <li>
-        <a href="/"><FontAwesomeIcon icon={faUser} className="headerIcon"/> Admin Login</a>
+        <Link to="/login"><FontAwesomeIcon icon={faUser} className="headerIcon"/> Admin Login</Link>
     </li>
   </ul>
 

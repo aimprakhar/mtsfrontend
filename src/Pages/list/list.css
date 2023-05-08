@@ -120,3 +120,18 @@ margin-top: 20px;
 
 
 
+.bbb{
+    border:2px solid black;
+   margin:1px;
+   padding:1px;
+   border-radius: 10px;
+}
+.jhyu{
+    display: block;
+    width:max-content;
+    /* margin-left: auto;
+    margin-right: auto;
+   margin-top: 1px; */
+   margin: 1rem auto 1rem auto;
+
+}

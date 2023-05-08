@@ -8,6 +8,9 @@ import { DateRange } from "react-date-range";
 import { SearchItem } from "../../components/searchItem/SearchItem";
 import useFetch from "../../components/hooks/useFetch";
 import Nav from "../../components/Nav/Nav";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import RingLoader from "react-spinners/RingLoader";
 export const List = () => {
   const location = useLocation();
   // hook
@@ -17,9 +20,7 @@ export const List = () => {
   const [dates, setDates] = useState(location.state.dates);
   const [openDate, setOpenDate] = useState(false);
 
-  const [options, setOptions] = useState(location.state.options);
-  const [min, setMin] = useState(undefined);
-  const [max, setMax] = useState(undefined);
+   var sz=0;
 
 
 // if(startLocation===""){
@@ -29,8 +30,14 @@ export const List = () => {
 // }
 
 
-   const {data,loading,error,reFetch}=useFetch(`https://mtsbackend.onrender.com/api/hotels/find?From=${startLocation}&To=${destination}`);
-  
+   var {data,loading,error,reFetch}=useFetch(`https://mtsbackend.onrender.com/api/hotels/find?From=${startLocation}&To=${destination}`);
+    const dt1=data;
+    var {data,loading,error,reFetch}=useFetch(`https://mtsbackend.onrender.com/api/hotels/find?From=${startLocation}`);
+    const dt2=data;
+    var {data,loading,error,reFetch}=useFetch(`https://mtsbackend.onrender.com/api/hotels/find?To=${destination}`);
+    const dt3=data;
+ 
+
 
   // &min=${min||1}&max=${max||9999}
 
@@ -89,12 +96,53 @@ export const List = () => {
 
           <div className="List_listResult">
 
-            {loading?("loading"):(
-             <>
-             {data.map(item=>(
+            {loading?(
+            
+            <div className="RingLoader">
+              <RingLoader color="#36d7b7" size="100px" />
+                  <p >Loading...</p>
+
+
+                </div>
+                 ):
+
+                 (
+                  <>
+           
+            
+                    
+
+
+            
+                {/* having exact start location */}
+                <div className="bbb">
+                  <div className="jhyu" >Having Exact Start Location and End Location:<FontAwesomeIcon icon={faArrowDown} className="headerIcon"/></div>
+                {dt1.map(item=>(
               <SearchItem item={item} key={item._id}/>
              ))}
-             <span className="finished"> 
+                </div>
+
+                <div className="bbb">
+                  <div className="jhyu" >Having Exact Start Location:<FontAwesomeIcon icon={faArrowDown} className="headerIcon"/></div>
+                {dt2.map(item=>(
+              <SearchItem item={item} key={item._id}/>
+             ))}
+                </div>
+
+                <div className="bbb">
+                  <div className="jhyu" >Having Exact End Location:<FontAwesomeIcon icon={faArrowDown} className="headerIcon"/></div>
+                {dt3.map(item=>(
+              <SearchItem item={item} key={item._id}/>
+             ))}
+                </div>
+            
+             
+              {/* having exact end location */}
+             {/* {dt3.map(item=>(
+              <SearchItem item={item} key={item._id}/>
+             ))} */}
+
+             <span className="jhyu"> 
              Thats all from database
              </span>
              </>

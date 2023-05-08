@@ -31,7 +31,7 @@ export const Featuredd = () => {
  
   ):(
  <>
-<span className='ghotu'>Featured Trips <FontAwesomeIcon icon={faArrowDown} className="headerIcon"/></span>
+<span className='ghotu' onClick={reFetch}>Verified Trips <FontAwesomeIcon icon={faArrowDown} className="headerIcon"/></span>
 
  {
 
