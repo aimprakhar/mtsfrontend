@@ -8,8 +8,12 @@ import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 
 
 export const Featuredd = () => {
-    const bt =false;
-    const {data,loading,error,reFetch}=useFetch(`https://mtsbackend.onrender.com/api/hotels/find?verified=${bt}`);
+    var bt =true;
+    var {data,loading,error,reFetch}=useFetch(`https://mtsbackend.onrender.com/api/hotels/find?verified=${bt}`);
+    var dt1=data;
+    bt=false;
+    var {data,loading,error,reFetch}=useFetch(`https://mtsbackend.onrender.com/api/hotels/find?verified=${bt}`);
+    var dt2=data;
     // console.log(data);
        const[ringLoader,SetRingLoader]=useState(true);
 
@@ -35,9 +39,17 @@ export const Featuredd = () => {
 
  {
 
- data.map(item=>(
+ dt1.map(item=>(
   <SearchItem item={item} key={item._id}/>
  ))}
+
+{
+
+dt2.map(item=>(
+ <SearchItem item={item} key={item._id}/>
+))}
+
+
   <h1 className='thatsall'>Thats All From Database</h1>
  </>
 

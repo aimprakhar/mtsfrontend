@@ -12,6 +12,9 @@ export const SearchItem = ({item}) => {
     navigate("/hotels/find");
  }
 
+ const status=item.verified===true?"siTaxiOp greeny":"siTaxiOp pinky";
+//  const ss=
+
   // var p="https://media.istockphoto.com/id/1164435677/photo/happy-hotel-clerks-are-welcoming-professional-at-counter.jpg?s=612x612&w=0&k=20&c=XNbtAFwGK4AHd7JKKQycDwTQcIXFagIxt9TXLNb0Dd4=";
 
 // const p=png1;
@@ -22,10 +25,14 @@ export const SearchItem = ({item}) => {
   return (
     
     <div className='searchItem' >
+      <div className='tyu'>
+      <span className={status}> {item.verified===true?"Verified":"Not Verified"}</span>
 <img src={p} alt="" className='siImg'/>
+</div>
 <div className='div11'>
-
+ 
 <div className='div12'>
+
   <div>
    <span className='red'>StartLocation</span>:{item.From} 
    </div>
@@ -33,11 +40,15 @@ export const SearchItem = ({item}) => {
    <span className='red'>Destination</span>:{item.To}
    </div>
    </div>
+  
+<span className="siTaxiOp">Trip Organisor: {item.Creater_Name}</span>
+
+
       <div  className='cntr div13'>
 <div className="siDesc">
 {/* <h1 className="siTitle"><span className='red'>StartLocation</span>:{item.From} <br/><span ><span className='red'>Destination</span>:{item.To}</span></h1> */}
-{/* <span className="siDistance">{item.To} from centre</span> */}
-<span className="siTaxiOp">Trip Organisor: {item.Creater_Name}</span>
+
+
 <span className="siSubtitle">Mode of Transport: ByRoad  </span>
 
 <span className="siCancelOp">Contact Number: {item.Creater_Mobile_number}</span>
