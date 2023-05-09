@@ -6,6 +6,7 @@ import { MailList } from '../mailList/MailList'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCross } from '@fortawesome/free-solid-svg-icons'
 import{faFacebookF, faGoogle, faInstagram, faLinkedin} from '@fortawesome/free-brands-svg-icons'
+import { Link } from 'react-router-dom'
 
 const About = () => {
   return (
@@ -45,9 +46,12 @@ const About = () => {
 
       <div className='brandsAbout'>
      {/* <FontAwesomeIcon icon={'facebook-messenger'}  className="arrow" /> */}
-     <FontAwesomeIcon icon={faInstagram} color='red' />
-     <FontAwesomeIcon icon={faLinkedin} color='blue' />
-     <FontAwesomeIcon icon={faGoogle} color='tomato' />
+
+     <Link to={"https://www.instagram.com/aim.prakhar"}><FontAwesomeIcon icon={faInstagram} color='red'  /></Link>
+     <Link to={"https://www.linkedin.com/in/aimprakhar"}><FontAwesomeIcon icon={faLinkedin} color='blue' /></Link>
+     
+     <Link to={"mailto:mytripsaathi@gmail.com"}><FontAwesomeIcon icon={faGoogle} color='tomato' /></Link>
+     
     
       </div>
         

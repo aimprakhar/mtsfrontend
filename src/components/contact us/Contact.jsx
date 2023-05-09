@@ -3,7 +3,7 @@ import Nav from '../Nav/Nav'
 import "./contact.css"
 import { MailList } from '../mailList/MailList'
 import { Footer } from '../Footer/Footer'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import PulseLoader from 'react-spinners/PulseLoader'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGoogle, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
@@ -119,10 +119,10 @@ const Contact = () => {
 <div className='brandsinContact'>
   
      {/* <FontAwesomeIcon icon={'facebook-messenger'}  className="arrow" /> */}
-     <FontAwesomeIcon icon={faInstagram} color='red' />
-     <FontAwesomeIcon icon={faLinkedin} color='blue' />
-     <FontAwesomeIcon icon={faGoogle} color='tomato' />
-    
+     <Link to={"https://www.instagram.com/aim.prakhar"}><FontAwesomeIcon icon={faInstagram} color='red'  /></Link>
+     <Link to={"https://www.linkedin.com/in/aimprakhar"}><FontAwesomeIcon icon={faLinkedin} color='blue' /></Link>
+     
+     <Link to={"mailto:mytripsaathi@gmail.com"}><FontAwesomeIcon icon={faGoogle} color='tomato' /></Link>
       </div> 
 </div>
 

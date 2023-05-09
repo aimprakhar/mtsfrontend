@@ -4,11 +4,32 @@ import { Header } from '../header/Header'
 import "./forms.css"
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { useLocation } from 'react-router-dom'
+import { Navigate, useLocation, useNavigate } from 'react-router-dom'
 import Nav from '../Nav/Nav'
 const FormSuccess = () => {
     const location = useLocation();
     const inputs=useState(location.state.inputs)
+
+
+    const [startLocation,setStartLocation]=useState(inputs[0].From);
+    const [destination,setDestination]=useState(inputs[0].To);
+  
+    const navigate =useNavigate();
+    const [dates, setdates] = useState([
+      {
+        startDate: new Date(),
+        endDate: new Date(),
+        key: 'selection'
+      }
+    ]);
+
+    
+    const handleSearch=()=>{
+    
+       navigate("/hotel", {state:{startLocation,destination,dates}});
+    }
+
+   
     
    
   return (
@@ -48,7 +69,12 @@ const FormSuccess = () => {
  <br />
  <span className='span'>Additional Details: </span>{inputs[0].AdditionalDetails}
  <br />
+ 
     </div>
+    <div className='centre' onClick={handleSearch}>
+    See Your Trip
+    </div>
+    
     </h4> 
    
     
@@ -58,13 +84,14 @@ const FormSuccess = () => {
 
    
    
-    <h4> <FontAwesomeIcon icon={faCheck} className='check' /> After successful verification Your Trip will be live on MytripSaathi.com and people will be able to join your Trip and contact you</h4> 
+    <h4> <FontAwesomeIcon icon={faCheck} className='check' /> After successful verification Your Trip will be live on MytripSaathi.com as "Verified Trip" and people will be able to join your Trip and contact you</h4> 
 
 
 
 
  
-    <h4> <FontAwesomeIcon icon={faCheck} className='check'/> For immidiate help: Contact :7272007217 or Contact 7239007240</h4> 
+    <h4> <FontAwesomeIcon icon={faCheck} className='check'/> For immidiate help: <a href='/contact' >Contact Us</a> </h4> 
+   
 
         
    
