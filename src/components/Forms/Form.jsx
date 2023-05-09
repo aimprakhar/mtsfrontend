@@ -52,8 +52,8 @@ const Form =() => {
     Onspinner(false);
     setBtn("RESUBMIT");
     alert(err)
-        console.log("error found" );
-        console.log(err );
+    
+        // console.log(err );
    }
    
   }
@@ -157,7 +157,7 @@ const call1=()=>{
 </form>
 </div>
 </div> 
-<MailList/>
+{/* <MailList/> */}
 <Footer/>
 </>
   )
