@@ -21,7 +21,8 @@ export const List = () => {
   const [openDate, setOpenDate] = useState(false);
 
    var sz=0;
-
+  //  setStartLocation(startLocation.replace(/\s*$/,''));
+  //  setDestination(destination.replace(/\s*$/,''));
 
 // if(startLocation===""){
 //   const{data,loading,error,reFetch}=useFetch(`http://localhost:8700/api/hotels/find?From=${startLocation}`);
@@ -30,11 +31,11 @@ export const List = () => {
 // }
 
 
-   var {data,loading,error,reFetch}=useFetch(`https://mtsbackend.onrender.com/api/hotels/find?From=${startLocation}&To=${destination}`);
+   var {data,loading,error,reFetch}=useFetch(`https://mtsbackend.onrender.com/api/hotels/find?From=${startLocation.toUpperCase()}&To=${destination.toUpperCase()}`);
     const dt1=data;
-    var {data,loading,error,reFetch}=useFetch(`https://mtsbackend.onrender.com/api/hotels/find?From=${startLocation}`);
+    var {data,loading,error,reFetch}=useFetch(`https://mtsbackend.onrender.com/api/hotels/find?From=${startLocation.toUpperCase()}`);
     const dt2=data;
-    var {data,loading,error,reFetch}=useFetch(`https://mtsbackend.onrender.com/api/hotels/find?To=${destination}`);
+    var {data,loading,error,reFetch}=useFetch(`https://mtsbackend.onrender.com/api/hotels/find?To=${destination.toUpperCase()}`);
     const dt3=data;
  
 

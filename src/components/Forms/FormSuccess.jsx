@@ -10,6 +10,7 @@ const FormSuccess = () => {
     const location = useLocation();
     const inputs=useState(location.state.inputs)
 
+    
 
     const [startLocation,setStartLocation]=useState(inputs[0].From);
     const [destination,setDestination]=useState(inputs[0].To);
@@ -25,8 +26,9 @@ const FormSuccess = () => {
 
     
     const handleSearch=()=>{
+     
     
-       navigate("/hotel", {state:{startLocation,destination,dates}});
+       navigate("/trips", {state:{startLocation,destination,dates}});
     }
 
    
@@ -44,6 +46,8 @@ const FormSuccess = () => {
    
     <h4> <FontAwesomeIcon icon={faCheck} className='check' /> Your trip details are submitted successfully with folowing inputs
     <div className='maindivv'>
+    <span className='span'>Trip Code:</span>{inputs[0].Trip_Number}
+    <br />
     <span className='span'>Full Name:</span>{inputs[0].Creater_Name}
 
 
@@ -59,6 +63,8 @@ const FormSuccess = () => {
 <span className='span'>Starting Location of Trip: </span>{inputs[0].From}
 <br />
 <span className='span'>Destination: </span>Destination:{inputs[0].To}
+<br />
+<span className='span'>Mode of Transport: </span>{inputs[0].Mode}
 <br />
 <span className='span'>Date: </span>{inputs[0].Date}
 <br />

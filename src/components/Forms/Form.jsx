@@ -33,9 +33,22 @@ const Form =() => {
 
   const handleChange = (event) => {
     const name = event.target.name;
-    const value = event.target.value;
+    let value = event.target.value;
+    value=value.trim();
+   value= value.toUpperCase();
+//    if(name==="Date"){
+//       value=format(value,"ddMMyyyy");
+//     }
+    // if(typeof(value)==="string"){console.log(name)}
+    // // console.log(typeof(value))
     setInputs(values => ({...values, [name]: value}))
   }
+
+
+// const handle final_change=()=>{
+
+// }
+
 
   const call2 = async(event) => {
     setBtn("");
@@ -138,7 +151,7 @@ const call1=()=>{
 {/* --------------------------------------------------------------------------- */}
 <div className="form-control">
         <label htmlFor="Mode"><span className='red'></span>Mode of Transport</label>
-        <input onChange={handleChange} id="mode" name="To" type="text" placeholder='optional: Auto Bus Train Flight or..'/>
+        <input onChange={handleChange} id="mode" name="Mode" type="text" placeholder='optional: Auto Bus Train Flight or..'/>
     </div>
 {/* --------------------------------------------------------------------------- */}
     <div className="form-control">

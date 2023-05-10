@@ -29,7 +29,7 @@
   text-align: left;
   margin-left: auto;
   margin-right: auto;
-  background-color: yellow;
+  background-color: rgb(248, 248, 178);
 
 
 }
@@ -48,7 +48,7 @@
 
 }
 .About121{
-    background-color: cyan;
+    background-color: rgb(140, 237, 237);
    display: flex;
    flex-direction: column;
    width:50%;

@@ -15,6 +15,7 @@ import Nav from './components/Nav/Nav';
 import About from './components/about/About';
 import Contact from './components/contact us/Contact';
 import Edit from './components/editdelete/Edit';
+import Rental from './components/rental/Rental';
 
 
 
@@ -23,7 +24,7 @@ function App() {
     <BrowserRouter>
     <Routes>
      <Route path="/" element={<Home/>}/>
-     <Route path="/hotel" element={<List/>}/>
+     <Route path="/trips" element={<List/>}/>
       <Route path="/hotels" element={<Hotels/>}/> 
      {/* <Route path="/hotels/find/:id" element={<Hotels/>}/> */}
    
@@ -37,6 +38,7 @@ function App() {
      <Route path="/about" element={<About/>}/>
      <Route path="/contact" element={<Contact/>}/>
      <Route path="/edit" element={<Edit/>}/>
+     <Route path="/rental" element={<Rental/>}/>
 
     
  

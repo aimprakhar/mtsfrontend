@@ -27,18 +27,27 @@ const About = () => {
           {/* ------------------------------------------------------------------------------------ */}
           <div className='About12'>
           <div className="About121"> 
-         <p>Frontend</p>
+          <p><span className='red'>Frontend</span></p>
          <p>HTML</p>
          <p>CSS</p>
          <p>Javascript</p>
+         <p>React</p>
          </div>
 
          <div className="About122">
          
          <p><span className='red'>Backend</span></p>
-         <p><span className='red'>HTML</span></p>
-         <p><span className='red'>CSS</span></p>
-         <p><span className='red'>Javascript</span></p>
+         <p>NodeJS</p>
+         <p>ExpressJS</p>
+         <p>MongoDB</p>
+
+         </div>
+         <div className="About121">
+         
+         <p><span className='red'>Others</span></p>
+         <p>Git</p>
+         <p>gitHub</p>
+         <p>FontAwesome</p>
 
          </div>
           </div>

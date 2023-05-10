@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {useNavigate } from 'react-router-dom';
 import "./searchItem.css"
 import { Link } from 'react-router-dom';
@@ -10,7 +10,25 @@ export const SearchItem = ({item}) => {
   const navigate =useNavigate();
   const handle=()=>{
     navigate("/hotels/find");
+
+
+
  }
+
+
+ let k=item.Date;
+ let ky=10;
+ let j="";
+ let a=0;
+ while(ky--){
+   j=j+k[a++];
+ }
+
+ let yy=j.substring(0,4);
+ let mm=j.substring(5,7);
+ let dd=j.substring(8,10);
+  j=dd+'-'+mm+'-'+yy;
+
 
  const status=item.verified===true?"siTaxiOp greeny":"siTaxiOp pinky";
 //  const ss=
@@ -48,8 +66,9 @@ export const SearchItem = ({item}) => {
 <div className="siDesc">
 {/* <h1 className="siTitle"><span className='red'>StartLocation</span>:{item.From} <br/><span ><span className='red'>Destination</span>:{item.To}</span></h1> */}
 
+<span className="siSubtitle">Trip Date:{j+(" (DD-MM-YYYY)")}  </span>
+<span className="siSubtitle">Mode of Transport: {item.Mode||"Not decided Yet"}  </span>
 
-<span className="siSubtitle">Mode of Transport: ByRoad  </span>
 
 <span className="siCancelOp">Contact Number: {item.Creater_Mobile_number}</span>
 {/* <span className='siFeatures'>{item.AdditionalDetails}</span> */}

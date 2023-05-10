@@ -6,7 +6,7 @@ import { DateRange } from 'react-date-range';
 import 'react-date-range/dist/styles.css'; // main css file
 import 'react-date-range/dist/theme/default.css'; // theme css file
 
-import { format } from 'date-fns';
+import { format, setDate } from 'date-fns';
 import { useNavigate } from 'react-router-dom';
 import { SearchContext } from '../../context/SearchContext';
 import { AuthContext } from '../../context/AuthContext';
@@ -37,17 +37,20 @@ export const Header = ({type}) => {
 
   const {user}=useContext(AuthContext);
   const [startLocation,setStartLocation]=useState("");
+
     const [destination,setDestination]=useState("");
     const [openDate,setOpenDate]=useState(false);
 
      const handleClick1=()=>{
       setOpenDate(!openDate);
     }
-
+         let tp=new Date;
+         let ed=tp.getDate();
     const [dates, setdates] = useState([
         {
-          startDate: new Date(),
-          endDate: new Date(),
+          startDate: new Date,
+          // endDate: new Date(),
+          endDate:tp.setDate(ed+90),
           key: 'selection'
         }
       ]);
@@ -68,16 +71,36 @@ export const Header = ({type}) => {
       const f2=()=>{
         navigate("/");
       }
+      const rental=()=>{
+        navigate("/rental");
+      }
     //   hook
 
 
        const {dispatch}=useContext(SearchContext)
 
+     
+
+       const convert=()=>{
+        const up1=startLocation.toUpperCase();
+        const up2=destination.toUpperCase();
+        setStartLocation(up1);
+        setDestination(up2);
+       }
+
+       
  
 
       const handleSearch=()=>{
         dispatch({type:"NEW_SEARCH",payload:{destination,dates,options}})
-         navigate("/hotel", {state:{startLocation,destination,dates}});
+        // let st=startLocation.toUpperCase();
+        // var st2=destination.toUpperCase();
+        
+        // setStartLocation(st);
+        // console.log(st)
+        // setDestination(st2);
+        convert();
+         navigate("/trips", {state:{startLocation,destination,dates}});
       }
 
       const login=()=>{
@@ -105,7 +128,7 @@ export const Header = ({type}) => {
     <span>Create a Trip</span>
     </div>
 
-    <div onClick={f2} className='headerListItem active'>
+    <div onClick={rental} className='headerListItem active'>
     <FontAwesomeIcon icon={faCar} />
     <span>Rental Services</span>
     </div>
