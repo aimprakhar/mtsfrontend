@@ -1,4 +1,4 @@
-import { faArrowDown, faBed, faCalendarDays, faCar, faChevronCircleDown, faChevronCircleRight, faChevronDown, faPerson, faPlane, faTaxi } from '@fortawesome/free-solid-svg-icons'
+import { faArrowDown, faBed, faBiking, faCalendarDays, faCar, faChevronCircleDown,  faLocationArrow,  faLocationDot,  faPenToSquare,  faPlane } from '@fortawesome/free-solid-svg-icons'
 import React, { useContext, useState } from 'react'
 import "./header.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -119,12 +119,14 @@ export const Header = ({type}) => {
         <div className={type==="list"? "headerContainer listMode":"headerContainer"}>
 <div className='headerList'>
     <div onClick={f2} className='headerListItem active'>
-    <FontAwesomeIcon icon={faBed} />
+    <FontAwesomeIcon icon={faLocationArrow} />
+   
+   
     <span>Join a Trip</span>
     </div>
 
     <div onClick={changeactive} className='headerListItem  active'>
-    <FontAwesomeIcon icon={faPlane} />
+    <FontAwesomeIcon icon={faPenToSquare} />
     <span>Create a Trip</span>
     </div>
 
@@ -159,7 +161,7 @@ export const Header = ({type}) => {
 <div className='headerSearch'>
     {/* ------------------------------------------------------- */}
 <div className='headerSearchItem'>
-    <FontAwesomeIcon icon={faBed} className="headerIcon"/>
+<FontAwesomeIcon icon={faLocationDot} className="headerIcon"/>
     <input type="text" placeholder='Trip starts From?' className='headerSearchInput' onChange={e=>setStartLocation(e.target.value)}/>
 </div>
 {/* ----------------------------------------------------------------------- */}
@@ -189,7 +191,7 @@ export const Header = ({type}) => {
 </div>
 {/* ---------------------------------------------------------------- */}
 <div className='headerSearchItem'>
-    <FontAwesomeIcon icon={faBed} className="headerIcon"/>
+    <FontAwesomeIcon icon={faLocationDot} className="headerIcon"/>
     <input type="text" placeholder='Trip Destination?' className='headerSearchInput' onChange={e=>setDestination(e.target.value)}/>
 </div>
 

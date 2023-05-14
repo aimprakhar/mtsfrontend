@@ -16,6 +16,7 @@ import About from './components/about/About';
 import Contact from './components/contact us/Contact';
 import Edit from './components/editdelete/Edit';
 import Rental from './components/rental/Rental';
+import Join from './components/join/Join';
 
 
 
@@ -39,6 +40,8 @@ function App() {
      <Route path="/contact" element={<Contact/>}/>
      <Route path="/edit" element={<Edit/>}/>
      <Route path="/rental" element={<Rental/>}/>
+     <Route path="/join" element={<Join/>}/>
+     
 
     
  
