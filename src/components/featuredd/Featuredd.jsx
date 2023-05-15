@@ -8,15 +8,19 @@ import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 
 
 export const Featuredd = () => {
-    var bt =false;
+    var bt=true;
     var {data,loading,error,reFetch}=useFetch(`https://mtsbackend.onrender.com/api/hotels/find?verified=${bt}`);
 
-    var dt1=data;
-    // dt1=dt1.reverse();
+    let dt1=[...data].reverse();
+   
+    // console.log({data});
+    
+    //  dt1.reverse();
+  
     bt=false;
-    // var {data,loading,error,reFetch}=useFetch(`https://mtsbackend.onrender.com/api/hotels/find?verified=${bt}`);
-    var dt2=data;
-    // console.log(data);
+     var {data,loading,error,reFetch}=useFetch(`https://mtsbackend.onrender.com/api/hotels/find?verified=${bt}`);
+    let dt2=[...data].reverse();
+   
        const[ringLoader,SetRingLoader]=useState(true);
 
 

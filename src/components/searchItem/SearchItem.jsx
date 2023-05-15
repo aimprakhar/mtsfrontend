@@ -65,7 +65,7 @@ export const SearchItem = ({item}) => {
       <div  className='cntr div13'>
 <div className="siDesc">
 {/* <h1 className="siTitle"><span className='red'>StartLocation</span>:{item.From} <br/><span ><span className='red'>Destination</span>:{item.To}</span></h1> */}
-
+<span className="siSubtitle">Trip_Number:{item.Trip_Number}  </span>
 <span className="siSubtitle">Trip Date:{j+(" (DD-MM-YYYY)")}  </span>
 <span className="siSubtitle">Mode of Transport: {item.Mode||"Not decided Yet"}  </span>
 

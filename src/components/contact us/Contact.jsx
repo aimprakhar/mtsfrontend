@@ -7,6 +7,11 @@ import { Link, useNavigate } from 'react-router-dom'
 import PulseLoader from 'react-spinners/PulseLoader'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGoogle, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import axios from 'axios'
+
+const p=1;//1 for server
+const local=p===1?"https://mtsbackend.onrender.com/api":"http://localhost:8700/api";
+
 const Contact = () => {
     
    const navigate=useNavigate();
@@ -33,17 +38,18 @@ const Contact = () => {
         Onspinner(true);
        
         event.preventDefault();
-     
-    //    try{const res=await axios.post("https://mtsbackend.onrender.com/api/hotels",inputs);
-    //    navigate("/FormSuccess", {state:{inputs}})
-    // }
-    //    catch(err){
-    //     Onspinner(false);
-    //     setBtn("RESUBMIT");
-    //     alert("Form Details are incorrect")
-    //         console.log("error found" );
-    //         console.log(err );
-    //    }
+   
+       try{const res=await axios.post(local+"/rooms",inputs);
+    // try{const res=await axios.post("http://localhost:8700/api/rooms",inputs);
+       navigate("/FormSuccess", {state:{inputs}})
+    }
+       catch(err){
+        Onspinner(false);
+        setBtn("RESUBMIT");
+        alert("Form Details are incorrect")
+            // console.log("error found" );
+            console.log(err );
+       }
        
       }
 
@@ -89,18 +95,18 @@ const Contact = () => {
 {/* --------------------------------------------------------------------------- */}
     <div className="form-control">
         <label htmlFor="name1">Full Name</label>
-        <input onChange={handleChange} id="name1" name="Creater_Name" type="text" />
+        <input onChange={handleChange} id="name1" name="Full_Name" type="text" />
     </div>
 {/* --------------------------------------------------------------------------- */}
    
     <div className="form-control">
         <label htmlFor="email">Email Address</label>
-        <input onChange={handleChange} id="email" name="Creater_Email" type="email" />
+        <input onChange={handleChange} id="email" name="Email" type="email" />
     </div>
 {/* --------------------------------------------------------------------------- */}
 <div className="form-control">
         <label htmlFor="name2">How may we help u ?</label>
-        <input onChange={handleChange} id="name2" name="Creater_Mobile_number" type="number" />
+        <textarea onChange={handleChange} id="name2" name="Reason" type="text" />
     </div>
 {/* --------------------------------------------------------------------------- */}
 
