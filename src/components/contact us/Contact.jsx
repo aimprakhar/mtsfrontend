@@ -41,7 +41,8 @@ const Contact = () => {
    
        try{const res=await axios.post(local+"/rooms",inputs);
     // try{const res=await axios.post("http://localhost:8700/api/rooms",inputs);
-       navigate("/FormSuccess", {state:{inputs}})
+    //    navigate("/FormSuccess", {state:{inputs}})
+    alert("Request submitted successfully")
     }
        catch(err){
         Onspinner(false);
