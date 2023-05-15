@@ -69,7 +69,7 @@ export const Header = ({type}) => {
 
 
       const f2=()=>{
-        navigate("/");
+        navigate("/join");
       }
       const rental=()=>{
         navigate("/rental");
