@@ -17,6 +17,8 @@ import Contact from './components/contact us/Contact';
 import Edit from './components/editdelete/Edit';
 import Rental from './components/rental/Rental';
 import Join from './components/join/Join';
+import { SearchRental } from './components/searchItem/SearchRental';
+import { RentalF } from './components/featuredd/RentalF';
 
 
 
@@ -41,6 +43,7 @@ function App() {
      <Route path="/edit" element={<Edit/>}/>
      <Route path="/rental" element={<Rental/>}/>
      <Route path="/join" element={<Join/>}/>
+     <Route path="/test" element={<RentalF/>}/>
      
 
     

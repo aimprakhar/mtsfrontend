@@ -5,9 +5,11 @@ import { SearchItem } from '../searchItem/SearchItem';
 import RingLoader from "react-spinners/RingLoader";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
+import { SearchRental } from '../searchItem/SearchRental';
+import Nav from '../Nav/Nav';
 
 
-export const Featuredd = () => {
+export const RentalF = () => {
     var bt=true;
     var {data,loading,error,reFetch}=useFetch(`https://mtsbackend.onrender.com/api/hotels/find?verified=${bt}&status=${"active"}`);
 
@@ -19,6 +21,7 @@ export const Featuredd = () => {
 
   return (
    <>
+   <Nav/>
    <div className="listResult">
   
    
@@ -34,12 +37,12 @@ export const Featuredd = () => {
  
   ):(
  <>
-<span className='ghotu' onClick={reFetch}>Verified Trips <FontAwesomeIcon icon={faArrowDown} className="headerIcon"/></span>
+<span className='ghotu' onClick={reFetch}>Rental Services available <FontAwesomeIcon icon={faArrowDown} className="headerIcon"/></span>
 
  {
 
  dt1.map(item=>(
-  <SearchItem item={item} key={item._id}/>
+  <SearchRental item={item} key={item._id}/>
  ))}
 
 
@@ -51,13 +54,7 @@ export const Featuredd = () => {
 )}
 
 
-{/* <SearchItem />
-<SearchItem />
-<SearchItem />
-<SearchItem />
-<SearchItem />
-<SearchItem />
-<SearchItem /> */}
+
 </div>
    </>
   )

@@ -51,7 +51,7 @@ Onspinner(false);
 
   return (
     <div className='mail'>
-        <h1 className='mailTitle'>Give Your Valuable Feedback and Reviews Here</h1>
+        <h3 className='mailTitle'>Give Your Valuable Feedback and Reviews Here</h3>
         {/* <span className="mailDesc">Sign up and we'll senf the best deals to you</span> */}
         <div className='mailInputContainer'>
           

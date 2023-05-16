@@ -30,7 +30,7 @@ export const SearchItem = ({item}) => {
   j=dd+'-'+mm+'-'+yy;
 
 
- const status=item.verified===true?"siTaxiOp greeny":"siTaxiOp pinky";
+ const status=item.verified==="true"?"siTaxiOp greeny":"siTaxiOp pinky";
 //  const ss=
 
   // var p="https://media.istockphoto.com/id/1164435677/photo/happy-hotel-clerks-are-welcoming-professional-at-counter.jpg?s=612x612&w=0&k=20&c=XNbtAFwGK4AHd7JKKQycDwTQcIXFagIxt9TXLNb0Dd4=";
@@ -44,7 +44,7 @@ export const SearchItem = ({item}) => {
     
     <div className='searchItem' >
       <div className='tyu'>
-      <span className={status}> {item.verified===true?"Verified":"Not Verified"}</span>
+      <span className={status}> {item.verified==="true"?"Verified":"Not Verified"}</span>
 <img src={p} alt="" className='siImg'/>
 </div>
 <div className='div11'>
