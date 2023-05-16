@@ -31,11 +31,11 @@ export const List = () => {
 // }
 
 
-   var {data,loading,error,reFetch}=useFetch(`https://mtsbackend.onrender.com/api/hotels/find?From=${startLocation.toUpperCase()}&To=${destination.toUpperCase()}`);
+   var {data,loading,error,reFetch}=useFetch(`https://mtsbackend.onrender.com/api/hotels/find?From=${startLocation.toUpperCase()}&To=${destination.toUpperCase()}&status=${"active"}`);
     const dt1=data;
-    var {data,loading,error,reFetch}=useFetch(`https://mtsbackend.onrender.com/api/hotels/find?From=${startLocation.toUpperCase()}`);
+    var {data,loading,error,reFetch}=useFetch(`https://mtsbackend.onrender.com/api/hotels/find?From=${startLocation.toUpperCase()}&status=${"active"}`);
     const dt2=data;
-    var {data,loading,error,reFetch}=useFetch(`https://mtsbackend.onrender.com/api/hotels/find?To=${destination.toUpperCase()}`);
+    var {data,loading,error,reFetch}=useFetch(`https://mtsbackend.onrender.com/api/hotels/find?To=${destination.toUpperCase()}&status=${"active"}`);
     const dt3=data;
  
 
