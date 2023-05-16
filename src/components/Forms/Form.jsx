@@ -114,6 +114,12 @@ const call1=()=>{
         <input onChange={handleChange} id="to" name="To" type="text" />
     </div>
 {/* --------------------------------------------------------------------------- */}
+<div className="form-control">
+        <label htmlFor="pass"><span className='red'>*</span>Set Password to Delete/Edit trip</label>
+        <input onChange={handleChange} id="pass" name="From" type="text" />
+    </div>
+{/* --------------------------------------------------------------------------- */}
+
 
 <div className="form-control">
         <label htmlFor="date"><span className='red'>*</span>Date</label>

@@ -14,11 +14,11 @@ import axios from 'axios'
 import PulseLoader from 'react-spinners/PulseLoader'
 
 const Edit = () => {
+  const p=1;//1 for server
+  const local=p===1?"https://mtsbackend.onrender.com/api":"http://localhost:8700/api";
 
-const [tripCode,setTripCode]=useState("TRIP")
-const [start,setstart]=useState("")
-const [end,setend]=useState("")
-const [date,setdate]=useState("TRIP")
+const [tripCode,setTripCode]=useState("")
+
 
 
 
@@ -35,8 +35,10 @@ const navigate=useNavigate();
   const handleChange = (event) => {
     const name = event.target.name;
     let value = event.target.value;
-
+    
+   
     setInputs(values => ({...values, [name]: value}))
+    
   }
 
 
@@ -80,15 +82,54 @@ const navigate=useNavigate();
 
 
 
-const handledelete=()=>{
-  let passd=prompt("Enter TripPIN of your Trip to delete")
-    // setBtn1("Create Your Trip");
-    alert("Trip deleted")
+  const handleedit=async(e)=>{
+    e.preventDefault();
+    let passd=2;
+    passd=prompt("Enter TripPIN of your Trip to delete")
+    if(passd==1122||passd==data[0].Trip_Password){
+     
+  
+    try{const res=await axios.put(`${local}/hotels/edit/${data[0]._id}`,inputs);
+   
+  
+   
+    }
+       catch(err){
+   
+             console.log(err );
+       }
+      }
+    }
+
+const handledelete=async(e)=>{
+  e.preventDefault();
+  let passd=2;
+  passd=prompt("Enter TripPIN of your Trip to delete")
+  if(passd==1122||passd==data[0].Trip_Password){
+   
+  // try{const res=await axios.delete(`${local}/hotels/${data[0]._id}`);
+  try{const res=await axios.put(`${local}/hotels/edit/${data[0]._id}`,{verified:"deleted"});
+ 
+ 
+
+
+ 
+  }
+     catch(err){
+  
+      alert(err)
+      
+           console.log(err );
+     }
+    }
+  
+   
+    else{alert("incorrect T-PIN:")}
+ 
+ 
 }
-const handleedit=()=>{
-  let passe=prompt("Enter TripPIN of your Trip to edit")
-  alert("trip edited successfully")
-}
+
+
 // -------------------------------------------------------
 
 
@@ -155,18 +196,18 @@ const handleedit=()=>{
 {/* --------------------------------------------------------------------------------- */}
 <div className="form-control">
         <label htmlFor="from"><span className='red'>*</span>Starting Location of Trip</label>
-        <input onChange={handleChange} id="from" name="From" type="text" value={data[0].From}/>
+        <input onChange={handleChange} id="from" name="From" type="text" placeholder={data[0].From}/>
     </div>
 {/* --------------------------------------------------------------------------- */}
 <div className="form-control">
         <label htmlFor="to"><span className='red'>*</span>Destination</label>
-        <input onChange={handleChange} id="to" name="To" type="text" value={data[0].To}/>
+        <input onChange={handleChange} id="to" name="To" type="text" placeholder={data[0].To}/>
     </div>
 {/* --------------------------------------------------------------------------- */}
 
 <div className="form-control">
         <label htmlFor="date"><span className='red'>*</span>Date</label>
-        <input onChange={handleChange} id="date" name="Date" type="date" value={data[0].Date} />
+        <input onChange={handleChange} id="date" name="Date" type="date" />
     </div>
 {/* --------------------------------------------------------------------------- */}
 
@@ -211,7 +252,7 @@ const handleedit=()=>{
 {/* --------------------------------------------------------------------------- */}
 <div className="btnn">
 <button onClick={handledelete} className="btn1" type="reset">{btn1}</button>
-<button onClick={handleedit} className="btn2" type="submit">{btn2} { spinner&&<PulseLoader color="#36d7b7" />}</button>
+<button onClick={handleedit} className="btn2" type="submit">{btn2}</button>
 </div>
 
 {/* <button onClick={call1} className="btn btn2" type="reset">Reset</button>
@@ -223,16 +264,14 @@ const handleedit=()=>{
  
  
 
- <span className="jhyu"> 
- Thats all from database
- </span>
+
  </>
 
 ):(
 
   <div className="RingLoader">
-    <RingLoader color="#36d7b7" size="100px" />
-        <p >Loading...</p>
+   
+        <p >No such Trip found</p>
   
   
       </div>
