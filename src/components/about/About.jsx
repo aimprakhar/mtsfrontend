@@ -21,8 +21,28 @@ const About = () => {
             <p><span className='red'>Developer</span>:Prakhar Shukla</p>
          <p><span className='red'>Course</span>:B.Tech(2020-2024)</p>
          <p><span className='red'>College</span>:NIT Agartala(2020-2024)</p>
+
+
+         <div className='brandsAbout'>
+     {/* <FontAwesomeIcon icon={'facebook-messenger'}  className="arrow" /> */}
+
+     <Link to={"https://www.instagram.com/aim.prakhar"}><FontAwesomeIcon icon={faInstagram} color='red'  /></Link>
+     <Link to={"https://www.linkedin.com/in/aimprakhar"}><FontAwesomeIcon icon={faLinkedin} color='blue' /></Link>
+     
+     <Link to={"mailto:mytripsaathi@gmail.com"}><FontAwesomeIcon icon={faGoogle} color='tomato' /></Link>
+     
+    
+      </div>
+
          </div>
+
           </div>
+
+
+
+
+
+          
 
           {/* ------------------------------------------------------------------------------------ */}
           <div className='About12'>
@@ -53,16 +73,7 @@ const About = () => {
           </div>
        
 
-      <div className='brandsAbout'>
-     {/* <FontAwesomeIcon icon={'facebook-messenger'}  className="arrow" /> */}
-
-     <Link to={"https://www.instagram.com/aim.prakhar"}><FontAwesomeIcon icon={faInstagram} color='red'  /></Link>
-     <Link to={"https://www.linkedin.com/in/aimprakhar"}><FontAwesomeIcon icon={faLinkedin} color='blue' /></Link>
      
-     <Link to={"mailto:mytripsaathi@gmail.com"}><FontAwesomeIcon icon={faGoogle} color='tomato' /></Link>
-     
-    
-      </div>
         
         </div>
         <MailList/>

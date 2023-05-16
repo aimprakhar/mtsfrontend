@@ -62,7 +62,7 @@ const FormSuccess = () => {
 <br />
 <span className='span'>Starting Location of Trip: </span>{inputs[0].From}
 <br />
-<span className='span'>Destination: </span>Destination:{inputs[0].To}
+<span className='span'>Destination: </span>{inputs[0].To}
 <br />
 <span className='span'>Mode of Transport: </span>{inputs[0].Mode}
 <br />

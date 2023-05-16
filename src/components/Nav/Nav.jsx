@@ -49,7 +49,7 @@ const nav=useNavigate();
   <ul>
 
   <li>
-        <a href="/">Home</a>
+        <Link to="/">Home</Link>
     </li>
 
   <li>

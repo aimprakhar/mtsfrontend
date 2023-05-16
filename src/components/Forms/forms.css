@@ -16,7 +16,7 @@
     /* border:0.1rem solid #dd4a4c; */
     /* border-bottom: 0.4rem solid #dd4a4c; */
     border-radius: 0.8rem;
-    box-shadow: 0.25rem 0.50rem rgba(0,0,0,.15)!important;
+    box-shadow: -0.25rem 0.50rem rgba(0,0,0,.15)!important;
 
 }
 
@@ -142,7 +142,8 @@ font-size: 0.7rem ;
   background-color: #dd4a4c;
   padding: 0.5rem;
   border-radius: 1rem;;
-  color:white
+  color:white;
+  cursor: pointer;
  
   }
   

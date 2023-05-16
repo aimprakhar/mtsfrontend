@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import "./mailList.css"
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import PulseLoader from 'react-spinners/PulseLoader';
 
 
 export const MailList = () => {
@@ -19,11 +20,7 @@ const local=p===1?"https://mtsbackend.onrender.com/api":"http://localhost:8700/a
     let value = event.target.value;
     value=value.trim();
    value= value.toUpperCase();
-//    if(name==="Date"){
-//       value=format(value,"ddMMyyyy");
-//     }
-    // if(typeof(value)==="string"){console.log(name)}
-    // // console.log(typeof(value))
+
     setInputs(values => ({...values, [name]: value}))
   }
 
@@ -36,8 +33,10 @@ const local=p===1?"https://mtsbackend.onrender.com/api":"http://localhost:8700/a
  
    try{const res=await axios.post(local+"/feedbacks",inputs);
 //  try{const res=await axios.post("http://localhost:8700/api/feedbacks",inputs);
-
+Onspinner(false);
  alert("Submitted Successfully")
+ setBtn("RESUBMIT");
+
 }
    catch(err){
     Onspinner(false);
@@ -58,8 +57,8 @@ const local=p===1?"https://mtsbackend.onrender.com/api":"http://localhost:8700/a
           
        <input onChange={handle} className='input10' type="text" name='Email' placeholder='Your Email' />
      
-       <textarea  className='textarea10' type="text" id="th" name='Feedback' placeholder='Enter your reviews here' rows={5}/>
-       <button onChange={handle} onClick={call2} style={{marginTop:"1rem"}} >Submit</button>
+       <textarea onChange={handle} className='textarea10' type="text" id="th" name='Feedback' placeholder='Enter your reviews here' rows={5}/>
+       <button  onClick={call2} style={{marginTop:"1rem"}} >{btn} { spinner&&<PulseLoader color="#36d7b7" />}</button>
        
         </div>
         

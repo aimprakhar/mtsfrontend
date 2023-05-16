@@ -93,12 +93,12 @@ const navigate=useNavigate();
   
     try{const res=await axios.put(`${local}/hotels/edit/${data[0]._id}`,inputs);
    
-  
+    alert("Trip Edited Successfully")
    
     }
        catch(err){
    
-             console.log(err );
+             alert(err );
        }
       }
     }
@@ -113,7 +113,7 @@ const handledelete=async(e)=>{
   try{const res=await axios.put(`${local}/hotels/edit/${data[0]._id}`,{status:"deleted"});
  
  
-
+alert("Trip Deleted Successfully")
 
  
   }
@@ -121,12 +121,12 @@ const handledelete=async(e)=>{
   
       alert(err)
       
-           console.log(err );
+          //  console.log(err );
      }
     }
   
    
-    else{alert("incorrect T-PIN:")}
+    else{alert("Password is incorrect:")}
  
  
 }
@@ -156,7 +156,7 @@ const handledelete=async(e)=>{
               <input 
               // onChange={e=>setTripCode(e.target.value)}
               onChange={e=>setTripCode(e.target.value)}
-              type="text" placeholder="TRIP..." value={tripCode} />
+              type="text" placeholder="TRIPXXXXXXXXXXXXXX" value={tripCode} />
             </div>
 
       

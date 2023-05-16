@@ -117,21 +117,21 @@ export const List = () => {
             
                 {/* having exact start location */}
                 <div className="bbb">
-                  <div className="jhyu" >Having Exact Start Location and End Location:<FontAwesomeIcon icon={faArrowDown} className="headerIcon"/></div>
+                  <div className="jhyu" >Having Exact StartLocation and Destination:<FontAwesomeIcon icon={faArrowDown} className="headerIcon"/></div>
                 {dt1.map(item=>(
               <SearchItem item={item} key={item._id}/>
              ))}
                 </div>
 
                 <div className="bbb">
-                  <div className="jhyu" >Having Exact Start Location:<FontAwesomeIcon icon={faArrowDown} className="headerIcon"/></div>
+                  <div className="jhyu" >Having Exact StartLocation:<FontAwesomeIcon icon={faArrowDown} className="headerIcon"/></div>
                 {dt2.map(item=>(
               <SearchItem item={item} key={item._id}/>
              ))}
                 </div>
 
                 <div className="bbb">
-                  <div className="jhyu" >Having Exact End Location:<FontAwesomeIcon icon={faArrowDown} className="headerIcon"/></div>
+                  <div className="jhyu" >Having Exact Destination:<FontAwesomeIcon icon={faArrowDown} className="headerIcon"/></div>
                 {dt3.map(item=>(
               <SearchItem item={item} key={item._id}/>
              ))}
