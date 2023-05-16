@@ -116,7 +116,7 @@ const call1=()=>{
 {/* --------------------------------------------------------------------------- */}
 <div className="form-control">
         <label htmlFor="pass"><span className='red'>*</span>Set Password to Delete/Edit trip</label>
-        <input onChange={handleChange} id="pass" name="From" type="text" />
+        <input onChange={handleChange} id="pass" name="Trip_Password" type="text" />
     </div>
 {/* --------------------------------------------------------------------------- */}
 

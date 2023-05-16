@@ -14,7 +14,7 @@ import axios from 'axios'
 import PulseLoader from 'react-spinners/PulseLoader'
 
 const Edit = () => {
-  const p=0;//1 for server
+  const p=1;//1 for server
   const local=p===1?"https://mtsbackend.onrender.com/api":"http://localhost:8700/api";
 
 const [tripCode,setTripCode]=useState("")
