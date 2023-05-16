@@ -110,7 +110,7 @@ const handledelete=async(e)=>{
   if(passd==1122||passd==data[0].Trip_Password){
    
   // try{const res=await axios.delete(`${local}/hotels/${data[0]._id}`);
-  try{const res=await axios.put(`${local}/hotels/edit/${data[0]._id}`,{verified:"deleted"});
+  try{const res=await axios.put(`${local}/hotels/edit/${data[0]._id}`,{status:"deleted"});
  
  
 
