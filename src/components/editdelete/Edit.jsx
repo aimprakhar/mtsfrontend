@@ -215,40 +215,40 @@ alert("Trip Deleted Successfully")
 
 <div className="form-control">
         <label htmlFor="name1">Full Name</label>
-        <input onChange={handleChange} id="name1" name="Creater_Name" type="text" placeholder='optional' value={data[0].Creater_Name}/>
+        <input onChange={handleChange} id="name1" name="Creater_Name" type="text" placeholder={data[0].Creater_Name}/>
     </div>
 {/* --------------------------------------------------------------------------- */}
     <div className="form-control">
         <label htmlFor="name2">Mobile or Instagram</label>
-        <input onChange={handleChange} id="name2" name="Creater_Mobile_number" type="text" placeholder='optional' value={data[0].Creater_Mobile_number}/>
+        <input onChange={handleChange} id="name2" name="Creater_Mobile_number" type="text" placeholder={data[0].Creater_Mobile_number}/>
     </div>
 {/* --------------------------------------------------------------------------- */}
     <div className="form-control">
         <label htmlFor="email">Email Address</label>
-        <input onChange={handleChange} id="email" name="Creater_Email" type="email" placeholder='optional' value={data[0].Creater_Email}/>
+        <input onChange={handleChange} id="email" name="Creater_Email" type="email" placeholder={data[0].Creater_Email}/>
     </div>
 {/* --------------------------------------------------------------------------- */}
 
 
 <div className="form-control">
         <label htmlFor="max_people">Max People Allowed</label>
-        <input onChange={handleChange} id="max_people" name="MaxPeople" type="text" placeholder='optional' value={data[0].MaxPeople}/>
+        <input onChange={handleChange} id="max_people" name="MaxPeople" type="text" placeholder={data[0].MaxPeople}/>
        
     </div>
 {/* --------------------------------------------------------------------------- */}
 <div className="form-control">
         <label htmlFor="expenses">Approx Travel Expenses in Rs.</label>
-        <input onChange={handleChange} id="expenses" name="AppxTripExpenses" type="number" placeholder='optional'   value={data[0].AppxTripExpenses}/>
+        <input onChange={handleChange} id="expenses" name="AppxTripExpenses" type="number" placeholder={data[0].AppxTripExpenses}/>
     </div>
 {/* --------------------------------------------------------------------------- */}
 <div className="form-control">
         <label htmlFor="Mode"><span className='red'></span>Mode of Transport</label>
-        <input onChange={handleChange} id="mode" name="Mode" type="text" placeholder='optional: Auto Bus Train Flight or..' value={data[0].Mode}/>
+        <input onChange={handleChange} id="mode" name="Mode" type="text" placeholder={data[0].Mode}/>
     </div>
 {/* --------------------------------------------------------------------------- */}
     <div className="form-control">
         <label htmlFor="message">Additional Details </label>
-        <textarea  onChange={handleChange} id="message" name="AdditionalDetails" rows="5" placeholder='optional' value={data[0].AdditionalDetails}></textarea>
+        <textarea  onChange={handleChange} id="message" name="AdditionalDetails" rows="5" placeholder={data[0].AdditionalDetails}></textarea>
     </div>
    
 {/* --------------------------------------------------------------------------- */}
