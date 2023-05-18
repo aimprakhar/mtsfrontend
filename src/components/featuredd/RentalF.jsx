@@ -14,8 +14,8 @@ import { Footer } from '../Footer/Footer';
 
 export const RentalF = () => {
     var bt=true;
-     var {data,loading,error,reFetch}=useFetch(`https://mtsbackend.onrender.com/api/rentals/find"}`);
-    // var {data,loading,error,reFetch}=useFetch("http://localhost:8700/api/rentals/find");
+    //  var {data,loading,error,reFetch}=useFetch(`https://mtsbackend.onrender.com/api/rentals/find"}`);
+    var {data,loading,error,reFetch}=useFetch("https://mtsbackend.onrender.com/api/rentals/find");
     let dt1=[...data].reverse();
   
    console.log(data);
