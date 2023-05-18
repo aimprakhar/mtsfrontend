@@ -36,7 +36,8 @@ const navigate=useNavigate();
     const name = event.target.name;
     let value = event.target.value;
     
-   
+    value=value.trim();
+    value= value.toUpperCase();
     setInputs(values => ({...values, [name]: value}))
     
   }
