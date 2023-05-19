@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import p from "./png1.png"
 import { faIndianRupee } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { SearchItemD } from './SearchItemD';
+
 
 export const SearchItem = ({item}) => {
   const navigate =useNavigate();

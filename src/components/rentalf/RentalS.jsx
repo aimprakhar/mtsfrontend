@@ -2,6 +2,7 @@ import React from 'react'
 import Nav from '../Nav/Nav'
 import "./rentals.css"
 import p from "./auto.png"
+import omni from "./omni.png"
 import { MailList } from '../mailList/MailList'
 import { Footer } from '../Footer/Footer'
 
@@ -11,7 +12,7 @@ const RentalS = ({item}) => {
  {/* <Nav/> */}
  <div className="RentalS">
     <div className="R11">
-        <img src={p} alt="" />
+        <img src={item.Rental_Type==="Auto"?p:omni} alt="v" />
     </div>
     <div className="R12">
         <span>Rental Type:{item.Rental_Type}</span>
