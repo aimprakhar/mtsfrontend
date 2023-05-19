@@ -87,9 +87,9 @@ const navigate=useNavigate();
 
   const handleedit=async(e)=>{
     e.preventDefault();
-    let passd=2;
+    let passd="2";
     passd=prompt("Enter TripPIN of your Trip to delete")
-    if(passd==1122||passd==data[0].Trip_Password){
+    if(passd=="11mts22"||passd==data[0].Trip_Password){
      
   
     try{const res=await axios.put(`${local}/hotels/edit/${data[0]._id}`,inputs);
@@ -106,9 +106,9 @@ const navigate=useNavigate();
 
 const handledelete=async(e)=>{
   e.preventDefault();
-  let passd=2;
+  let passd="2";
   passd=prompt("Enter TripPIN of your Trip to delete")
-  if(passd==1122||passd==data[0].Trip_Password){
+  if(passd=="11mts22"||passd==data[0].Trip_Password){
    
   // try{const res=await axios.delete(`${local}/hotels/${data[0]._id}`);
   try{const res=await axios.put(`${local}/hotels/edit/${data[0]._id}`,{status:"deleted"});
