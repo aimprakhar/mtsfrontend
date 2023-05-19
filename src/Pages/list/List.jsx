@@ -11,6 +11,7 @@ import Nav from "../../components/Nav/Nav";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import RingLoader from "react-spinners/RingLoader";
+import { Footer } from "../../components/Footer/Footer";
 export const List = () => {
   const location = useLocation();
   // hook
@@ -50,6 +51,7 @@ export const List = () => {
   }
 
   return (
+    <>
     <div>
        <Nav/>
       {/* <Navbar /> */}
@@ -117,21 +119,21 @@ export const List = () => {
             
                 {/* having exact start location */}
                 <div className="bbb">
-                  <div className="jhyu" >Having Exact StartLocation and Destination:<FontAwesomeIcon icon={faArrowDown} className="headerIcon"/></div>
+                  <div className="jhyu" >  Trips having Exact StartLocation and Destination will show here:<FontAwesomeIcon icon={faArrowDown} className="headerIcon"/></div>
                 {dt1.map(item=>(
               <SearchItem item={item} key={item._id}/>
              ))}
                 </div>
 
                 <div className="bbb">
-                  <div className="jhyu" >Having Exact StartLocation:<FontAwesomeIcon icon={faArrowDown} className="headerIcon"/></div>
+                  <div className="jhyu" >Trips having Exact StartLocation will show here:<FontAwesomeIcon icon={faArrowDown} className="headerIcon"/></div>
                 {dt2.map(item=>(
               <SearchItem item={item} key={item._id}/>
              ))}
                 </div>
 
                 <div className="bbb">
-                  <div className="jhyu" >Having Exact Destination:<FontAwesomeIcon icon={faArrowDown} className="headerIcon"/></div>
+                  <div className="jhyu" >Trips having Exact Destination will show here:<FontAwesomeIcon icon={faArrowDown} className="headerIcon"/></div>
                 {dt3.map(item=>(
               <SearchItem item={item} key={item._id}/>
              ))}
@@ -162,5 +164,7 @@ export const List = () => {
         </div>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 };

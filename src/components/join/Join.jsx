@@ -10,7 +10,8 @@ const Join = () => {
     <Nav/>
  
     <Header type="list" />
-    <Featuredd/>
+    <Featuredd type="all"/>
+    
     <Footer/>
     
     </>

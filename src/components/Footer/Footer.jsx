@@ -3,6 +3,7 @@ import "./footer.css"
 
 export const Footer = () => {
   return (
+   <footer>
      <div className='footer'>
     {/* //     <div className='fLists'>
    
@@ -12,5 +13,6 @@ export const Footer = () => {
 
     <div className='fText'>Copyright @ 2023 MyTripSaathi.com</div>
      </div>
+     </footer>
   )
 }

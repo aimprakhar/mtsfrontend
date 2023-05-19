@@ -122,7 +122,7 @@ export const Header = ({type}) => {
     <FontAwesomeIcon icon={faLocationArrow} />
    
    
-    <span>Join a Trip</span>
+    <span>See all Trips</span>
     </div>
 
     <div onClick={changeactive} className='headerListItem  active'>

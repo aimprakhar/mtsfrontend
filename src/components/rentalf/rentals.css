@@ -6,7 +6,7 @@
  padding: 0.5rem;
  /* border:0.1rem solid #dd4a4c; */
  /* border-bottom: 0.4rem solid #dd4a4c; */
- border-radius: 0.8rem;
+ /* border-radius: 0.8rem; */
  box-shadow: -0.25rem 0.50rem rgba(0,0,0,.15)!important;
 
 
@@ -24,6 +24,7 @@
    
 
     margin:10px;
+    margin-bottom: 20px;
 }
 
 .R11{

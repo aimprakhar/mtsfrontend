@@ -7,12 +7,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 
 
-export const Featuredd = () => {
+export const Featuredd = ({type}) => {
     var bt=true;
-    var {data,loading,error,reFetch}=useFetch(`https://mtsbackend.onrender.com/api/hotels/find?verified=${bt}&status=${"active"}`);
-
+    
+    var {data,loading,error,reFetch}=useFetch(`https://mtsbackend.onrender.com/api/hotels/find?status=${"active"}`);
     let dt1=[...data].reverse();
-  
+    
+      var {data,loading,error,reFetch}=useFetch(`https://mtsbackend.onrender.com/api/hotels/find?verified=${bt}&status=${"active"}`);
+     var dtn2=data;
+    
+
+    let dt2=[...data].reverse();
+  const datan=type==="all"?dt1:dtn2;
    
        const[ringLoader,SetRingLoader]=useState(true);
 
@@ -34,11 +40,11 @@ export const Featuredd = () => {
  
   ):(
  <>
-<span className='ghotu' onClick={reFetch}>Verified Trips <FontAwesomeIcon icon={faArrowDown} className="headerIcon"/></span>
+<span className='ghotu' onClick={reFetch}>{type==="all"?"All Trips":"Verified Trips"} <FontAwesomeIcon icon={faArrowDown} className="headerIcon"/></span>
 
  {
 
- dt1.map(item=>(
+ datan.map(item=>(
   <SearchItem item={item} key={item._id}/>
  ))}
 

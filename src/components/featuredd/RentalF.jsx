@@ -18,7 +18,7 @@ export const RentalF = () => {
     var {data,loading,error,reFetch}=useFetch("https://mtsbackend.onrender.com/api/rentals/find");
     let dt1=[...data].reverse();
   
-   console.log(data);
+
        const[ringLoader,SetRingLoader]=useState(true);
 
 

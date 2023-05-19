@@ -37,6 +37,10 @@ export const SearchItem = ({item}) => {
 
 // const p=png1;
 
+const joinn=()=>{
+  navigate("/")
+}
+
 
 
 
@@ -95,9 +99,9 @@ export const SearchItem = ({item}) => {
 {/* <span className="siTaxOp">Includes taxes and fees</span> */}
 
 {/* <Link to={`/hotels/find`}>  */}
-<Link to={`/`}>
-<button className='siCheckButton'>Join the Trip</button>
-</Link>
+
+<button onClick={joinn} className='siCheckButton'>More Details</button>
+
 
   </div>
     
