@@ -34,8 +34,16 @@ const Form =() => {
   const handleChange = (event) => {
     const name = event.target.name;
     let value = event.target.value;
-    value=value.trim();
+    
+    if(name==="Date"){
+        // value=value.to_string();
+    }
+    else{
+        value=value.trim();
    value= value.toUpperCase();
+    }
+
+    
 //    if(name==="Date"){
 //       value=format(value,"ddMMyyyy");
 //     }

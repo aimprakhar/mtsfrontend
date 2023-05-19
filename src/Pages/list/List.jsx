@@ -22,27 +22,30 @@ export const List = () => {
   const [openDate, setOpenDate] = useState(false);
 
    var sz=0;
-  //  setStartLocation(startLocation.replace(/\s*$/,''));
-  //  setDestination(destination.replace(/\s*$/,''));
 
-// if(startLocation===""){
-//   const{data,loading,error,reFetch}=useFetch(`http://localhost:8700/api/hotels/find?From=${startLocation}`);
-//   // const{data,loading,error,reFetch}=useFetch(`http://localhost:8700/api/hotels/find?From=$${destination}`);
-//   // const{data,loading,error,reFetch}=useFetch(`http://localhost:8700/api/hotels/find?From=${startLocation}&To=${destination}`);
-// }
+// const  fl= data.map(item=>(
+//   return item.Date>dates[0].startDate;
+//  ))
 
 
    var {data,loading,error,reFetch}=useFetch(`https://mtsbackend.onrender.com/api/hotels/find?From=${startLocation.toUpperCase()}&To=${destination.toUpperCase()}&status=${"active"}`);
     const dt1=data;
     var {data,loading,error,reFetch}=useFetch(`https://mtsbackend.onrender.com/api/hotels/find?From=${startLocation.toUpperCase()}&status=${"active"}`);
+    // data.map(item=>(
+    //   console.log(`${item.Date}::${dates[0].startDate}`)
+     
+    //  ))
+   
     const dt2=data;
+
     var {data,loading,error,reFetch}=useFetch(`https://mtsbackend.onrender.com/api/hotels/find?To=${destination.toUpperCase()}&status=${"active"}`);
     const dt3=data;
  
 
+// &min=${dates[0].startDate}&max=${dates[0].endDate}
+  //  &min=${min||1}&max=${max||9999}
 
-  // &min=${min||1}&max=${max||9999}
-
+  
   const handleBtnCLick=()=>{
     // localhost:8800/api/hotels/find?city=madrid&min=300&max=800
     reFetch();

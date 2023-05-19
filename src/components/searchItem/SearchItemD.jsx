@@ -5,9 +5,8 @@ import { Link } from 'react-router-dom';
 import p from "./png1.png"
 import { faIndianRupee } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { SearchItemD } from './SearchItemD';
 
-export const SearchItem = ({item}) => {
+export const SearchItemD = ({item}) => {
   const navigate =useNavigate();
   const handle=()=>{
     navigate("/hotels/find");
@@ -39,7 +38,7 @@ export const SearchItem = ({item}) => {
 // const p=png1;
 
 const joinn=()=>{
- alert("No More Info Available")
+  navigate("/")
 }
 
 
