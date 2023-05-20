@@ -10,7 +10,7 @@ const nav=useNavigate();
       nav("/")
     }
     const [bar,setcross]=useState(true);
-   
+   const[Tn,Tnn]=useState("");
 
     const barclick=()=>{
 
@@ -19,7 +19,9 @@ const nav=useNavigate();
     }
 
    
-
+    const edut =()=>{
+      nav("/edit", {state:{Tn}});
+    }
 
 
   return (
@@ -55,11 +57,9 @@ const nav=useNavigate();
   <li>
         <Link to="/form">Create a Trip</Link>
     </li>
-    {/* <li>
-        <a href="/">Delete a Trip</a>
-    </li> */}
+  
     <li>
-        <Link to="/edit">Edit/Delete a Trip</Link>
+        <a><span className='edut' onClick={edut}>Edit/Delete a Trip</span></a> 
     </li>
    
     

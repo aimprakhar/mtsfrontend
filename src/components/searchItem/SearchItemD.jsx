@@ -16,12 +16,17 @@ import { Footer } from '../Footer/Footer';
 
 export const SearchitemD = () => {
   var urll=window.location.href;
-  // console.log(urll)
+  //  console.log(urll)
 
   urll=urll.slice(-18);
   // console.log(urll)
 
   var {data,loading,error,reFetch}=useFetch(`https://mtsbackend.onrender.com/api/hotels/find?status=${"active"}&Trip_Number=${urll}`);
+  const data1=data;
+  urll=window.location.href;
+  urll=urll.slice(-17);
+  var {data,loading,error,reFetch}=useFetch(`https://mtsbackend.onrender.com/api/hotels/find?status=${"active"}&Trip_Number=${urll}`);
+  const data2=data;
 //  console.log(data);
   // const [Tn,ctn]=useState(data[0].Trip_Number)
 
@@ -68,9 +73,16 @@ export const SearchitemD = () => {
 
  {
 
- data.map(item=>(
+ data1.map(item=>(
   <TripD item={item} key={item._id}/>
  ))}
+
+{
+
+data2.map(item=>(
+ <TripD item={item} key={item._id}/>
+))}
+
 
 
 

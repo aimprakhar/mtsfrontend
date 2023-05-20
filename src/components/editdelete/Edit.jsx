@@ -16,10 +16,10 @@ import PulseLoader from 'react-spinners/PulseLoader'
 const Edit = () => {
 
   const location = useLocation();
-  // hook
+  
 
   const [Ttn,ctn]=useState(location.state.Tn);
-
+  
 
   const p=1;//1 for server
   const local=p===1?"https://mtsbackend.onrender.com/api":"http://localhost:8700/api";
@@ -59,7 +59,7 @@ const navigate=useNavigate();
   
   
     const handleBtnCLick=()=>{
-      
+     
       reFetch();
       
       

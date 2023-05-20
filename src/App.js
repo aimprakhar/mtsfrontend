@@ -21,12 +21,13 @@ import Join from './components/join/Join';
 import { RentalF } from './components/featuredd/RentalF';
 import RentalS from './components/rentalf/RentalS';
 import { SearchitemD } from './components/searchItem/SearchItemD';
+import { useState } from 'react';
 
 
 
 
 function App() {
- 
+ const [a,b]=useState("y")
   return (
     <BrowserRouter>
     <Routes>

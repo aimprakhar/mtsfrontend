@@ -17,7 +17,10 @@ export const SearchItem = ({item}) => {
 
 
  }
-
+ const joinn=()=>{
+  alert("this service will start soon");
+// navigate("/tripD", {state:{Tn}});
+}
 
  let k=item.Date;
  let ky=10;
@@ -52,7 +55,7 @@ const edit =()=>{
 const share =()=>{
   navigate(`https://wa.me/?text="hi"`)
 
-  
+
 }
 
 
@@ -115,7 +118,7 @@ const share =()=>{
 
 
 <button onClick={moree} className='siCheckButton'>More Details</button>
-<button  className='siCheckButton'>Join trip</button>
+<button onClick={joinn} className='siCheckButton'>Join trip</button>
 
 </div>
 
