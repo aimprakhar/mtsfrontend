@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const TripD = ({item}) => {
   const [Tn,ctn]=useState(item.Trip_Number)
-
+  const [sare,sareS]=useState(`whatsapp://send?text=www.TripSaathi.com/f/${item.Trip_Number}`)
   const navigate =useNavigate();
   const handle=()=>{
     navigate("/hotels/find");
@@ -41,7 +41,7 @@ export const TripD = ({item}) => {
 // const p=png1;
 
 const joinn=()=>{
-  alert("service not Available");
+  alert("this service will start soon");
 // navigate("/tripD", {state:{Tn}});
 }
 
@@ -127,7 +127,7 @@ const share =()=>{
 <div className="btnss2">
 
 <button onClick={edit} className='siCheckButton'>Edit/Delete</button>
-<button className='siCheckButton'><a href="whatsapp://send?text=SHAREMESSAGE">Share</a></button>
+<button className='siCheckButton'><a href={sare}>Share</a></button>
 {/* <a href="whatsapp://send?text=SHAREMESSAGE">Share on WhatsApp</a> */}
 </div>
 </div>
