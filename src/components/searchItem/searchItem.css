@@ -173,15 +173,37 @@ justify-content: space-between;
 
 }
 
+.btnss1{
+    display: flex;
+    /* justify-content: space-between; */
+margin-left: auto;
+margin-top: auto;
+}
+
+.btnss2{
+    display: flex;
+    justify-content: space-between;
+width:25%;
+margin-right: 2rem;;
+margin-left: auto;
+margin-top: auto;
+gap:20px
+}
+
+.btnss2>.siCheckButton{
+    color: #ee5759;
+   background-color:  rgb(221, 247, 247);
+}
 
 
 .siCheckButton{
 background-color: #0071c2;
 color:whitesmoke;
-padding: 10px 5px;
+ padding: 0.1rem  0.1rem; 
 border:none;
 cursor: pointer;
-margin-top: 10%;
+margin-top: 1%;
+margin-right: 1%;
 width: max-content;
 margin-left: auto;
 }
@@ -263,4 +285,10 @@ margin-left: auto;
    /* justify-content: space-between; */
 }
 
+}
+
+
+
+.linkresult{
+    padding:20vh 2vh;
 }

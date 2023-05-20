@@ -105,7 +105,7 @@ export const List = () => {
             {loading?(
             
             <div className="RingLoader">
-              <RingLoader color="#36d7b7" size="100px" />
+              <RingLoader color="#36d7b7" size="100px" speed="60" />
                   <p >Loading...</p>
 
 

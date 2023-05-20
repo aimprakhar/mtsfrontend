@@ -8,6 +8,9 @@ import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 
 
 export const Featuredd = ({type}) => {
+
+
+
     var bt=true;
     
     var {data,loading,error,reFetch}=useFetch(`https://mtsbackend.onrender.com/api/hotels/find?status=${"active"}`);

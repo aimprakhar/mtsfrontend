@@ -9,15 +9,22 @@ import RingLoader from 'react-spinners/RingLoader'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
 import { SearchItem } from '../searchItem/SearchItem'
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import PulseLoader from 'react-spinners/PulseLoader'
 
 const Edit = () => {
+
+  const location = useLocation();
+  // hook
+
+  const [Ttn,ctn]=useState(location.state.Tn);
+
+
   const p=1;//1 for server
   const local=p===1?"https://mtsbackend.onrender.com/api":"http://localhost:8700/api";
 
-const [tripCode,setTripCode]=useState("")
+const [tripCode,setTripCode]=useState(Ttn||"")
 
 
 
@@ -44,8 +51,8 @@ const navigate=useNavigate();
 
 
 
+  // const {data,loading,error,reFetch}=useFetch(`https://mtsbackend.onrender.com/api/hotels/find?Trip_Number=${tripCode}&status=${"active"}`);
   const {data,loading,error,reFetch}=useFetch(`https://mtsbackend.onrender.com/api/hotels/find?Trip_Number=${tripCode}&status=${"active"}`);
-
   // &min=${min||1}&max=${max||9999}
 
  
@@ -88,7 +95,7 @@ const navigate=useNavigate();
   const handleedit=async(e)=>{
     e.preventDefault();
     let passd="2";
-    passd=prompt("Enter TripPIN of your Trip to delete")
+    passd=prompt("Enter Password of your Trip to delete")
     if(passd=="11mts22"||passd==data[0].Trip_Password){
      
   
@@ -102,12 +109,13 @@ const navigate=useNavigate();
              alert(err );
        }
       }
+      else{alert("Password is incorrect:")}
     }
 
 const handledelete=async(e)=>{
   e.preventDefault();
   let passd="2";
-  passd=prompt("Enter TripPIN of your Trip to delete")
+  passd=prompt("Enter Password of your Trip to delete")
   if(passd=="11mts22"||passd==data[0].Trip_Password){
    
   // try{const res=await axios.delete(`${local}/hotels/${data[0]._id}`);
@@ -124,6 +132,7 @@ alert("Trip Deleted Successfully")
       
           //  console.log(err );
      }
+     
     }
   
    

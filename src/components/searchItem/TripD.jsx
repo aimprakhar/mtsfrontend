@@ -7,7 +7,7 @@ import { faIndianRupee } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
-export const SearchItem = ({item}) => {
+export const TripD = ({item}) => {
   const [Tn,ctn]=useState(item.Trip_Number)
 
   const navigate =useNavigate();
@@ -40,9 +40,9 @@ export const SearchItem = ({item}) => {
 
 // const p=png1;
 
-const moree=()=>{
-  // alert("No More Info Available");
-navigate(`/f/${item.Trip_Number}`, {state:{Tn}});
+const joinn=()=>{
+  alert("service not Available");
+// navigate("/tripD", {state:{Tn}});
 }
 
 const edit =()=>{
@@ -50,11 +50,9 @@ const edit =()=>{
 }
 
 const share =()=>{
-  navigate(`https://wa.me/?text="hi"`)
+  navigate(`https://www.wa.me/?text="hi"`)
 
-  
 }
-
 
   return (
     
@@ -87,9 +85,11 @@ const share =()=>{
 
 
 <span className="siCancelOp">Contact Number: {item.Creater_Mobile_number}</span>
+<span className="siCancelOp">Contact Number: {item.Creater_Email}</span>
+<span className="siCancelOp">Max People Required: {item.MaxPeople}</span>
 {/* <span className='siFeatures'>{item.AdditionalDetails}</span> */}
-
-<span className="siCancelOpSubtitle">You can join and leave the trip as per your consent .Trip organisor will finally decide the final fellow people going for trip</span>
+<span className="siCancelOp">Additonal Details:</span>
+<span className="siCancelOpSubtitle">{item.AdditionalDetails}</span>
 
 
 
@@ -114,8 +114,8 @@ const share =()=>{
 <div className="btnss1">
 
 
-<button onClick={moree} className='siCheckButton'>More Details</button>
-<button  className='siCheckButton'>Join trip</button>
+<button onClick={joinn} className='siCheckButton'>Join trip</button>
+
 
 </div>
 
@@ -128,9 +128,7 @@ const share =()=>{
 
 <button onClick={edit} className='siCheckButton'>Edit/Delete</button>
 <button className='siCheckButton'><a href="whatsapp://send?text=SHAREMESSAGE">Share</a></button>
-
-
-
+{/* <a href="whatsapp://send?text=SHAREMESSAGE">Share on WhatsApp</a> */}
 </div>
 </div>
 

@@ -20,10 +20,13 @@ import Join from './components/join/Join';
 
 import { RentalF } from './components/featuredd/RentalF';
 import RentalS from './components/rentalf/RentalS';
+import { SearchitemD } from './components/searchItem/SearchItemD';
+
 
 
 
 function App() {
+ 
   return (
     <BrowserRouter>
     <Routes>
@@ -45,6 +48,9 @@ function App() {
      <Route path="/rental" element={<RentalF/>}/>
      <Route path="/join" element={<Join/>}/>
      <Route path="/test" element={<RentalF/>}/>
+     <Route path="/f/:tripN" element={<SearchitemD/>}/>
+     
+ 
      
 
     
