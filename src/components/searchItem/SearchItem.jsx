@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const SearchItem = ({item}) => {
   const [Tn,ctn]=useState(item.Trip_Number)
-  const [sare,sareS]=useState(`whatsapp://send?text=www.MyTripSaathi.com/f/${item.Trip_Number}`)
+  const [sare,sareS]=useState(`whatsapp://send?text=www.MyTripSaathi.com/#/f/${item.Trip_Number}`)
   const navigate =useNavigate();
   const handle=()=>{
     navigate("/hotels/find");

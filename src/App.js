@@ -1,7 +1,6 @@
 
 import './App.css';
-import { BrowserRouter,Routes,Route } from 'react-router-dom';
-
+import { BrowserRouter,Routes,Route, HashRouter } from 'react-router-dom';
 import { Home } from './Pages/home/Home';
 import { List } from './Pages/list/List';
 import { Hotels } from './Pages/hotels/Hotels';
@@ -29,8 +28,8 @@ import { useState } from 'react';
 function App() {
  const [a,b]=useState("y")
   return (
-    <BrowserRouter>
-    <Routes>
+    <HashRouter>
+    <Routes >
      <Route path="/" element={<Home/>}/>
      <Route path="/trips" element={<List/>}/>
       <Route path="/hotels" element={<Hotels/>}/> 
@@ -49,8 +48,8 @@ function App() {
      <Route path="/rental" element={<RentalF/>}/>
      <Route path="/join" element={<Join/>}/>
      <Route path="/test" element={<RentalF/>}/>
-     <Route path="/f/:tripN" element={<SearchitemD/>}/>
-     
+     <Route path="/#/f/:tripN" element={<SearchitemD/>}/>
+     {/* <Route element={<Home/>}/> */}
  
      
 
@@ -59,7 +58,7 @@ function App() {
  
     </Routes>
     
-    </BrowserRouter>
+    </HashRouter>
    
     
   );
