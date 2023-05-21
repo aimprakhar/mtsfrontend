@@ -35,8 +35,9 @@ const Form =() => {
     const name = event.target.name;
     let value = event.target.value;
     
-    if(name==="Date"){
+    if(name==="Date"||name==="Trip_Password"){
         // value=value.to_string();
+        ;
     }
     else{
         value=value.trim();
