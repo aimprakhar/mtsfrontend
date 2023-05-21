@@ -21,7 +21,7 @@ export const Featuredd = ({type}) => {
     
 
     let dt2=[...data].reverse();
-  const datan=type==="all"?dt1:dtn2;
+  const datan=type==="all"?dt1:dt2;
    
        const[ringLoader,SetRingLoader]=useState(true);
 
