@@ -107,7 +107,7 @@ alert(err);
 {/* <span className='siFeatures'>{item.AdditionalDetails}</span> */}
 <span className="siCancelOp">Additonal Details:</span>
 <span className="siCancelOpSubtitle">{item.AdditionalDetails}</span>
-
+<span >You can join and leave the trip as per your consent .Trip organisor will finally decide the final fellow people going for trip</span>
 
 
 
