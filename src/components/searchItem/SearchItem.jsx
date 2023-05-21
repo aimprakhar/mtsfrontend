@@ -62,9 +62,9 @@ const edit =()=>{
 
 
  const shr={
-  title:"adsfd",
-  text:"GDFS",
-  url:("https://www.fg.com/#/df")
+  title:"shareb by MyTripSaathi.com",
+  text:"MyTripSaathi invites you to connect the Trip shared below , You can also create your own Trip and let your friends join you ",
+  url:({sare})
  }
 
 const share =async()=>{
