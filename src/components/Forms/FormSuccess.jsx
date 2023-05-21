@@ -16,13 +16,17 @@ const FormSuccess = () => {
     const [destination,setDestination]=useState(inputs[0].To);
   
     const navigate =useNavigate();
-    const [dates, setdates] = useState([
-      {
-        startDate: new Date(),
-        endDate: new Date(),
-        key: 'selection'
-      }
-    ]);
+
+    let tp=new Date;
+    let ed=tp.getDate();
+const [dates, setdates] = useState([
+   {
+     startDate: new Date,
+     // endDate: new Date(),
+     endDate:tp.setDate(ed+90),
+     key: 'selection'
+   }
+ ]);
 
     
     const handleSearch=()=>{
@@ -96,7 +100,7 @@ const FormSuccess = () => {
 
 
  
-    <h4> <FontAwesomeIcon icon={faCheck} className='check'/> For immidiate help: <a href='/contact' >Contact Us</a> </h4> 
+    <h4> <FontAwesomeIcon icon={faCheck} className='check'/> For immidiate help: <a href='#/contact' >Contact Us</a> </h4> 
    
 
         
