@@ -100,6 +100,9 @@ export const Header = ({type}) => {
         // console.log(st)
         // setDestination(st2);
         convert();
+        let kp=startLocation;
+        kp=kp.trim();
+        setStartLocation(kp);
          navigate("/trips", {state:{startLocation,destination,dates}});
       }
 
@@ -111,7 +114,7 @@ export const Header = ({type}) => {
       //  const all=document.getElementsByClassName("headerListItem");
       //  console.log(all[1])
       
-
+    
 // ------------------------------------------------------------------------------------------------------------------------------------------------
   return (
 
@@ -162,7 +165,7 @@ export const Header = ({type}) => {
     {/* ------------------------------------------------------- */}
 <div className='headerSearchItem'>
 <FontAwesomeIcon icon={faLocationDot} className="headerIcon"/>
-    <input type="text" placeholder='Trip starts From?' className='headerSearchInput' onChange={e=>setStartLocation(e.target.value)}/>
+    <input type="text" placeholder='Trip starts From?' className='headerSearchInput' onChange={e=>setStartLocation(e.target.value.trim())}/>
 </div>
 {/* ----------------------------------------------------------------------- */}
 <div className='headerSearchItem'>
@@ -192,6 +195,7 @@ export const Header = ({type}) => {
 {/* ---------------------------------------------------------------- */}
 <div className='headerSearchItem'>
     <FontAwesomeIcon icon={faLocationDot} className="headerIcon"/>
+    {/* <input type="text" placeholder='Trip Destination?' className='headerSearchInput' onChange={e=>setDestination(e.target.value.trim())}/> */}
     <input type="text" placeholder='Trip Destination?' className='headerSearchInput' onChange={e=>setDestination(e.target.value)}/>
 </div>
 
