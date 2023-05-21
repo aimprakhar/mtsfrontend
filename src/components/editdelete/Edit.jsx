@@ -95,7 +95,7 @@ const navigate=useNavigate();
   const handleedit=async(e)=>{
     e.preventDefault();
     let passd="2";
-    passd=prompt("Enter Password of your Trip to delete")
+    passd=prompt("Enter Password of your Trip to edit it")
     if(passd=="11mts22"||passd==data[0].Trip_Password){
      
   
@@ -115,7 +115,7 @@ const navigate=useNavigate();
 const handledelete=async(e)=>{
   e.preventDefault();
   let passd="2";
-  passd=prompt("Enter Password of your Trip to delete")
+  passd=prompt("Enter Password of your Trip to delete it")
   if(passd=="11mts22"||passd==data[0].Trip_Password){
    
   // try{const res=await axios.delete(`${local}/hotels/${data[0]._id}`);
@@ -283,7 +283,7 @@ alert("Trip Deleted Successfully")
 
   <div className="RingLoader">
    
-        <p >No such Trip found</p>
+        <p >If Trip found,it will show here</p>
   
   
       </div>
