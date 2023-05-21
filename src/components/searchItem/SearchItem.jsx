@@ -8,8 +8,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 export const SearchItem = ({item}) => {
+  let kgg="#";
   const [Tn,ctn]=useState(item.Trip_Number)
-  const [sare,sareS]=useState(`whatsapp://send?text=www.MyTripSaathi.com/#/f/${item.Trip_Number}`)
+  // const [sare,sareS]=useState(`whatsapp://send?text=www.MyTripSaathi.com/${kgg}/f/${item.Trip_Number}`)
+  const [sare,sareS]=useState(`www.MyTripSaathi.com/${kgg}/f/${item.Trip_Number}`)
   const navigate =useNavigate();
   const handle=()=>{
     navigate("/hotels/find");
@@ -17,6 +19,11 @@ export const SearchItem = ({item}) => {
 
 
  }
+
+
+
+
+
  const joinn=()=>{
   alert("this service will start soon");
 // navigate("/tripD", {state:{Tn}});
@@ -49,13 +56,30 @@ navigate(`/f/${item.Trip_Number}`, {state:{Tn}});
 }
 
 const edit =()=>{
+ 
   navigate("/edit", {state:{Tn}});
 }
 
-const share =()=>{
-  navigate(`https://wa.me/?text="hi"`)
 
+ const shr={
+  title:"adsfd",
+  text:"GDFS",
+  url:("https://www.fg.com/#/df")
+ }
 
+const share =async()=>{
+  // navigate(`https://wa.me/?text="hi"`)
+  if(navigator.share){
+try{
+  let res=await navigator.share(shr)
+}
+catch(err){
+alert(err);
+}
+  }
+  else{alert(
+    `Copy the Link below to share this Trip:\n\n${sare}`
+  )}
 }
 
 
@@ -130,7 +154,7 @@ const share =()=>{
 <div className="btnss2">
 
 <button onClick={edit} className='siCheckButton'>Edit/Delete</button>
-<button className='siCheckButton'><a href={sare}>Share</a></button>
+<button onClick={share} className='siCheckButton'>Share</button>
 
 
 

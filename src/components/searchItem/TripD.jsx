@@ -49,9 +49,25 @@ const edit =()=>{
   navigate("/edit", {state:{Tn}});
 }
 
-const share =()=>{
-  navigate(`https://www.wa.me/?text="hi"`)
+const shr={
+  title:"adsfd",
+  text:"GDFS",
+  url:("https://www.fg.com/#/df")
+ }
 
+const share =async()=>{
+  // navigate(`https://wa.me/?text="hi"`)
+  if(navigator.share&& navigator.canShare(shr)){
+try{
+  let res=await navigator.share(shr)
+}
+catch(err){
+alert(err);
+}
+  }
+  else{alert(
+    `Copy the Link below to share this Trip:\n\n${sare}`
+  )}
 }
 
   return (
@@ -127,7 +143,7 @@ const share =()=>{
 <div className="btnss2">
 
 <button onClick={edit} className='siCheckButton'>Edit/Delete</button>
-<button className='siCheckButton'><a href={sare}>Share</a></button>
+<button onClick={share} className='siCheckButton'>Share</button>
 {/* <a href="whatsapp://send?text=SHAREMESSAGE">Share on WhatsApp</a> */}
 </div>
 </div>

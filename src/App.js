@@ -48,7 +48,7 @@ function App() {
      <Route path="/rental" element={<RentalF/>}/>
      <Route path="/join" element={<Join/>}/>
      <Route path="/test" element={<RentalF/>}/>
-     <Route path="/#/f/:tripN" element={<SearchitemD/>}/>
+     <Route path="/f/:tripN" element={<SearchitemD/>}/>
      {/* <Route element={<Home/>}/> */}
  
      
