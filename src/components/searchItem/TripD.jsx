@@ -52,10 +52,11 @@ const edit =()=>{
 const shr={
   title:"shareb by MyTripSaathi.com",
   text:"MyTripSaathi invites you to connect the Trip shared below , You can also create your own Trip and let your friends join you ",
-  url:({sare})
+  url:(`MyTripsaathi.com/#/f/${item.Trip_Number}`)
  }
 
 const share =async()=>{
+  // alert(shr.url)
   // navigate(`https://wa.me/?text="hi"`)
   if(navigator.share&& navigator.canShare(shr)){
 try{

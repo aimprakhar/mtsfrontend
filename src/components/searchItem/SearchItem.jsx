@@ -8,10 +8,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 export const SearchItem = ({item}) => {
-  let kgg="#";
+  
   const [Tn,ctn]=useState(item.Trip_Number)
   // const [sare,sareS]=useState(`whatsapp://send?text=www.MyTripSaathi.com/${kgg}/f/${item.Trip_Number}`)
-  const [sare,sareS]=useState(`www.MyTripSaathi.com/${kgg}/f/${item.Trip_Number}`)
+  const [sare,sareS]=useState(`www.MyTripSaathi.com/#/f/${item.Trip_Number}`)
   const navigate =useNavigate();
   const handle=()=>{
     navigate("/hotels/find");
@@ -64,7 +64,7 @@ const edit =()=>{
  const shr={
   title:"shareb by MyTripSaathi.com",
   text:"MyTripSaathi invites you to connect the Trip shared below , You can also create your own Trip and let your friends join you ",
-  url:({sare})
+  url:(sare)
  }
 
 const share =async()=>{
