@@ -51,7 +51,7 @@ const edit =()=>{
 
 const shr={
   title:"shareb by MyTripSaathi.com",
-  text:"MyTripSaathi invites you to connect the Trip shared below , You can also create your own Trip and let your friends join you ",
+  text:`MyTripsaathi.com/#/f/${item.Trip_Number}MyTripSaathi invites you to connect the Trip shared below , You can also create your own Trip and let your friends join you `,
   url:(`MyTripsaathi.com/#/f/${item.Trip_Number}`)
  }
 
