@@ -28,7 +28,7 @@ export const List = () => {
 //  ))
 
 
-   var {data,loading,error,reFetch}=useFetch(`https://mtsbackend.onrender.com/api/hotels/find?From=${startLocation.trim().toUpperCase()}&To=${destination.toUpperCase()}&status=${"active"}`);
+   var {data,loading,error,reFetch}=useFetch(`https://mtsbackend.onrender.com/api/hotels/find?From=${startLocation.trim().toUpperCase()}&To=${destination.trim().toUpperCase()}&status=${"active"}`);
     const dt1=data;
     var {data,loading,error,reFetch}=useFetch(`https://mtsbackend.onrender.com/api/hotels/find?From=${startLocation.trim().toUpperCase()}&status=${"active"}`);
     // data.map(item=>(
