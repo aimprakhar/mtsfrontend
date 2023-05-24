@@ -3,7 +3,6 @@ display: flex;
 /* background-color: black; */
 justify-content: center;
 
-margin-top: 20px;
 }
 
 .listWrapper{
@@ -11,22 +10,25 @@ margin-top: 20px;
     max-width: 1024px;
     display: flex;
     gap:20px;
-    padding:1%;
-    margin-top: 6vh;
+    /* padding:1%;
+    margin-top: 6vh; */
     /* background-color: red; */
     /* flex-direction: column; */
 
 }
 
+
+
 .listSearch{
     flex:1;
-    background-color: #feb002;
+    background-color:rgb(206, 245, 245);
+    /* background-color: #feb002; */
     padding :10px;
     border-radius: 10px;
     position:sticky;
     top:10px;
     height:max-content;
-
+    box-shadow: -0.25rem 0.50rem rgba(0,0,0,.15)!important;
 
 }
 .lsTitle{
@@ -87,13 +89,17 @@ margin-top: 20px;
     padding: 10px;
 }
 .listSearch>button{
+    
     padding:10px;
-    background-color: #0071c2;
-    color: white;
-    border:none;
-    width:100%;
+    width:30%;
     font-weight: 500;
     cursor: pointer;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border:0.001rem solid #0071c2;
+    color: #0071c2;
 }
 
 @media(max-width:900px){
@@ -136,3 +142,8 @@ margin-top: 20px;
    max-width: 80vw;
 
 }
+
+/* .edit2{
+    padding-top:80px
+} */
+

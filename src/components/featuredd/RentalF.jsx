@@ -24,7 +24,7 @@ export const RentalF = () => {
 
   return (
    <>
-   <Nav/>
+
 
 <div className="RentalF">
 
@@ -34,7 +34,7 @@ export const RentalF = () => {
   {loading?(
     <div className="RingLoader">
   <RingLoader color="#36d7b7" size="100px" />
-  <p >Loading...</p>
+  <p >Loading for Rental Services...</p>
   
   
   </div>
@@ -43,7 +43,7 @@ export const RentalF = () => {
    
     ):(
    <>
-  <span className='ghotu' onClick={reFetch}>Rental Services available <FontAwesomeIcon icon={faArrowDown} className="headerIcon"/></span>
+  <span className='ghotu' onClick={reFetch}></span>
   
    {
   
@@ -54,7 +54,7 @@ export const RentalF = () => {
   
   
   
-    <h1 className='thatsall'>Thats All From Database</h1>
+    
    </>
   
   )}
@@ -62,8 +62,7 @@ export const RentalF = () => {
 
 </div>
 
-  <MailList/>
-  <Footer/>
+
    </>
   )
 }

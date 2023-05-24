@@ -40,8 +40,7 @@ const [dates, setdates] = useState([
    
   return (
     <>
-    <Nav/>
-   <Header type="list" />
+   
    <div className="success">
    
     

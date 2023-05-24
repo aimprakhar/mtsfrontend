@@ -60,58 +60,31 @@ const Contact = () => {
 
   return (
     <> 
-    <Nav/>
-    {/* { <div className='Contact'>  */}
-   
-        {/* <div className="Contact11">
-         
-        
-        <form action="">
-          <div>
-          <label htmlFor="email">Your Email:</label>
-            <input type="text" name="" id="email" /></div> 
-            <br />
-            <div>
-            <label htmlFor="Reason">Reason:</label>
-            <input type="text" />
-            </div>
-          
-            <br />
-            <input type="submit" />
-        </form> *
-        
-
-
-
-        </div>
-        
-     
-        
-        
-        </div> */}
-
-
+  
 <div className='Contact'>
 <div className="formContainer">
-
+<div className="cent">~~ Contact Us ~~</div>
     <div className="form">
      <form>
 {/* --------------------------------------------------------------------------- */}
-    <div className="form-control">
-        <label htmlFor="name1">Full Name</label>
+<fieldset className='fields'> 
+  <legend htmlFor="Mode">Full Name</legend>
+      
         <input onChange={handleChange} id="name1" name="Full_Name" type="text" />
-    </div>
+    </fieldset>
 {/* --------------------------------------------------------------------------- */}
    
-    <div className="form-control">
-        <label htmlFor="email">Email Address</label>
+<fieldset className='fields'> 
+  <legend htmlFor="Mode">Email Address</legend>
+    
         <input onChange={handleChange} id="email" name="Email" type="email" />
-    </div>
+    </fieldset>
 {/* --------------------------------------------------------------------------- */}
-<div className="form-control">
-        <label htmlFor="name2">How may we help u ?</label>
+<fieldset className='fields'> 
+  <legend htmlFor="Mode">How may we help u ?</legend>
+       
         <textarea onChange={handleChange} id="name2" name="Reason" type="text" />
-    </div>
+    </fieldset>
 {/* --------------------------------------------------------------------------- */}
 
 {/* --------------------------------------------------------------------------- */}
@@ -124,7 +97,6 @@ const Contact = () => {
 <button onClick={call2} className="btn" type="submit">{btn}</button> */}
 </form>
 </div>
-</div>
 <div className="connect"><p> OR: Connect with us on Social Media:</p></div>
 <div className='brandsinContact'>
   
@@ -136,8 +108,9 @@ const Contact = () => {
       </div> 
 </div>
 
-        <MailList/>
-        <Footer/>
+</div>
+
+     
         </>
   )
 }

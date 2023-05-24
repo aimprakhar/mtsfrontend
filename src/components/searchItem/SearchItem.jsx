@@ -3,7 +3,7 @@ import {useNavigate } from 'react-router-dom';
 import "./searchItem.css"
 import { Link } from 'react-router-dom';
 import p from "./png1.png"
-import { faIndianRupee } from '@fortawesome/free-solid-svg-icons';
+import { faCheck, faCross, faIndianRupee, faMultiply } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
@@ -87,7 +87,8 @@ alert(err);
     
     <div className='searchItem' >
       <div className='tyu'>
-      <span className={status}> {item.verified==="true"?"Verified":"Not Verified"}</span>
+        <span></span>
+      <span className={status}> {item.verified==="true"?(<><span>Verified</span><FontAwesomeIcon icon={faCheck}/></>):(<><span>Not Verified </span><FontAwesomeIcon icon={faMultiply}/></>)}</span>
 <img src={p} alt="" className='siImg'/>
 </div>
 <div className='div11'>
@@ -117,7 +118,7 @@ alert(err);
 {/* <span className='siFeatures'>{item.AdditionalDetails}</span> */}
 
 
-<span className="siCancelOpSubtitle">{item.AdditionalDetails}</span>
+<span className="siCancelOp ">Additional Detials:{item.AdditionalDetails}</span>
 
 
 
@@ -142,7 +143,7 @@ alert(err);
 
 
 <button onClick={moree} className='siCheckButton'>More Details</button>
-<button onClick={joinn} className='siCheckButton'>Join trip</button>
+{/* <button onClick={joinn} className='siCheckButton'>Join trip</button> */}
 
 </div>
 

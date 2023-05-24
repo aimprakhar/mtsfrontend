@@ -1,8 +1,4 @@
 
-.Login{
-    padding-top:16vh;
-    
-}
 .lcontainer{
     width:40%;
    
@@ -26,8 +22,8 @@ gap:10px;
 .lButton{
     border:none;
     padding:10px 20px;
-    background-color: #0071c2;
-    color:white;
+    
+    
     font-weight: bold;
     cursor: pointer;
     border-radius: 5px;
@@ -51,7 +47,8 @@ h6{
     color:green;
 }
 .bgreen{
-    background-color: green;
+    border:0.001rem solid green;
+    color: green;
 }
 
 .note{

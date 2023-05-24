@@ -58,7 +58,7 @@ Onspinner(false)
 
   return (
     <> 
-    <Nav/>
+   
     <div className='Login'>
         <div className="lcontainer">
           <input type="text" placeholder='AdminName' id="username" onChange={handleChange} className="lInput" />

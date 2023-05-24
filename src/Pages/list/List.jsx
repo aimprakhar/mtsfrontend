@@ -56,9 +56,7 @@ export const List = () => {
   return (
     <>
     <div>
-       <Nav/>
-      {/* <Navbar /> */}
-       <Header type="list" /> 
+     
 
       <div className="listContainer">
         <div className="listWrapper">
@@ -167,7 +165,7 @@ export const List = () => {
         </div>
       </div>
     </div>
-    <Footer/>
+   
     </>
   );
 };

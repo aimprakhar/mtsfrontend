@@ -3,10 +3,14 @@ import "./nav.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faBed, faUser, faXmark } from '@fortawesome/free-solid-svg-icons'
 import { Link, Navigate, useNavigate } from 'react-router-dom'
+import Edit2 from '../editdelete/Edit2'
 
 const Nav = () => {
+
 const nav=useNavigate();
+const navigate=useNavigate()
     const logoclick=()=>{
+    
       nav("/")
     }
     const [bar,setcross]=useState(true);
@@ -20,7 +24,16 @@ const nav=useNavigate();
 
    
     const edut =()=>{
-      nav("/edit", {state:{Tn}});
+     
+      navigate("/editt");
+       chk();
+    }
+    const chk=()=>{
+      let p=document.getElementById('check')
+      
+      if(p.checked){p.checked=false;}
+      else{p.checked=true;}
+      setcross(!bar)
     }
 
 
@@ -50,27 +63,30 @@ const nav=useNavigate();
  
   <ul>
 
-  <li>
+  <li onClick={chk}>
         <Link to="/">Home</Link>
     </li>
 
-  <li>
+  <li onClick={chk}>
+      {/* onClick="check()" */}
         <Link to="/form">Create a Trip</Link>
-    </li>
+    </li >
   
-    <li>
-        <a><span className='edut' onClick={edut}>Edit/Delete a Trip</span></a> 
+    <li onClick={chk}>
+        <Link to={"/edit2"}> Edit/Delete a Trip</Link> 
     </li>
    
     
-    <li>
-        <Link to="/about">About Us</Link>
+    <li onClick={chk}>
+        <Link to={"/about"}>About Us</Link>
     </li>
   
-    <li>
-        <Link to="/contact">Contact Us</Link>
+    <li onClick={chk}>
+      
+     
+         <Link to={"/contact"}>Contact Us</Link>
     </li>
-    <li>
+    <li onClick={chk}>
         <Link to="/login"><FontAwesomeIcon icon={faUser} className="headerIcon"/> Admin Login</Link>
     </li>
   </ul>

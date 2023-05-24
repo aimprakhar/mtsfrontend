@@ -35,7 +35,7 @@ left:20px;
 .listResult{
     width:100vw;
     max-width:1224px;
-    margin-top: 17vh;;
+    /* margin-top: 17vh;; */
    margin-left: auto;
    margin-right: auto;
 
@@ -83,7 +83,10 @@ left:20px;
 
 
 .RentalF{
-    padding-top: 10vh;
+    /* padding-top: 10vh; */
+    max-width: 1193px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 

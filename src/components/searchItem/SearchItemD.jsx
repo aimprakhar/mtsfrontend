@@ -12,6 +12,8 @@ import { TripD } from './TripD';
 import Nav from '../Nav/Nav';
 import { MailList } from '../mailList/MailList';
 import { Footer } from '../Footer/Footer';
+import Contact from '../contact us/Contact';
+import { Header } from '../header/Header';
 
 
 export const SearchitemD = () => {
@@ -54,6 +56,7 @@ export const SearchitemD = () => {
     
    <>
    <Nav/>
+   <Header type="list"/>
    <div className="linkresult">
   
    
@@ -95,7 +98,7 @@ data2.map(item=>(
 
 
 </div>
-<MailList/>
+<Contact/>
 <Footer/>
 
       </>

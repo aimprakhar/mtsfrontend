@@ -1,17 +1,10 @@
 import React, { useState } from 'react'
-import Nav from '../Nav/Nav'
-import "./edit.css"
-import { MailList } from '../mailList/MailList'
-import { Footer } from '../Footer/Footer'
-import { Header } from '../header/Header'
+
 import useFetch from '../hooks/useFetch'
-import RingLoader from 'react-spinners/RingLoader'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
-import { SearchItem } from '../searchItem/SearchItem'
+
 import { useLocation, useNavigate } from 'react-router-dom'
 import axios from 'axios'
-import PulseLoader from 'react-spinners/PulseLoader'
+
 
 const Edit = () => {
 
@@ -150,11 +143,8 @@ alert("Trip Deleted Successfully")
   return (
 
     <>
-    <Nav/>
 
-    <Header type="list" /> 
-
-<div className="listContainer">
+<div className="listContainer ">
   <div className="listWrapper">
     
 
@@ -199,67 +189,78 @@ alert("Trip Deleted Successfully")
 
 
 
-    <div className="form-control">
-        <label htmlFor="tripcode1">Trip Code</label>
+<fieldset className='fields'> 
+  <legend >Trip Code</legend>
+       
         <input  id="tripcode1" name=" Trip_Number" type="text" value={tripCode} />
-    </div>
+    </fieldset>
 
 
 {/* --------------------------------------------------------------------------------- */}
-<div className="form-control">
-        <label htmlFor="from"><span className='red'>*</span>Starting Location of Trip</label>
+<fieldset className='fields'> 
+  <legend ><span className='red'>*</span>Starting Location of Trip</legend>
+        
         <input onChange={handleChange} id="from" name="From" type="text" placeholder={data[0].From}/>
-    </div>
+    </fieldset>
 {/* --------------------------------------------------------------------------- */}
-<div className="form-control">
-        <label htmlFor="to"><span className='red'>*</span>Destination</label>
+<fieldset className='fields'> 
+  <legend ><span className='red'>*</span>Destination</legend>
+       
         <input onChange={handleChange} id="to" name="To" type="text" placeholder={data[0].To}/>
-    </div>
+    </fieldset>
 {/* --------------------------------------------------------------------------- */}
 
-<div className="form-control">
-        <label htmlFor="date"><span className='red'>*</span>Date</label>
+<fieldset className='fields'> 
+  <legend ><span className='red'>*</span>Date</legend>
+     
         <input onChange={handleChange} id="date" name="Date" type="date" />
-    </div>
+    </fieldset>
 {/* --------------------------------------------------------------------------- */}
 
-<div className="form-control">
-        <label htmlFor="name1">Full Name</label>
+<fieldset className='fields'> 
+  <legend >Full Name</legend>
+       
         <input onChange={handleChange} id="name1" name="Creater_Name" type="text" placeholder={data[0].Creater_Name}/>
-    </div>
+    </fieldset>
 {/* --------------------------------------------------------------------------- */}
-    <div className="form-control">
-        <label htmlFor="name2">Mobile or Instagram</label>
+<fieldset className='fields'> 
+  <legend >Mobile or Instagram</legend>
+       
         <input onChange={handleChange} id="name2" name="Creater_Mobile_number" type="text" placeholder={data[0].Creater_Mobile_number}/>
-    </div>
+    </fieldset>
 {/* --------------------------------------------------------------------------- */}
-    <div className="form-control">
-        <label htmlFor="email">Email Address</label>
+<fieldset className='fields'> 
+  <legend >Email Address</legend>
+      
         <input onChange={handleChange} id="email" name="Creater_Email" type="email" placeholder={data[0].Creater_Email}/>
-    </div>
+    </fieldset>
 {/* --------------------------------------------------------------------------- */}
 
 
-<div className="form-control">
-        <label htmlFor="max_people">Max People Allowed</label>
+<fieldset className='fields'> 
+  <legend >Max People Allowed</legend>
+      
         <input onChange={handleChange} id="max_people" name="MaxPeople" type="text" placeholder={data[0].MaxPeople}/>
        
-    </div>
+    </fieldset>
 {/* --------------------------------------------------------------------------- */}
-<div className="form-control">
-        <label htmlFor="expenses">Approx Travel Expenses in Rs.</label>
+<fieldset className='fields'> 
+  <legend >Approx Travel Expenses in Rs.</legend>
+     
         <input onChange={handleChange} id="expenses" name="AppxTripExpenses" type="number" placeholder={data[0].AppxTripExpenses}/>
-    </div>
+    </fieldset>
 {/* --------------------------------------------------------------------------- */}
-<div className="form-control">
-        <label htmlFor="Mode"><span className='red'></span>Mode of Transport</label>
+<fieldset className='fields'> 
+  <legend >Mode of Transport</legend>
+        
         <input onChange={handleChange} id="mode" name="Mode" type="text" placeholder={data[0].Mode}/>
-    </div>
+    </fieldset>
 {/* --------------------------------------------------------------------------- */}
-    <div className="form-control">
-        <label htmlFor="message">Additional Details </label>
+<fieldset className='fields'> 
+  <legend >Additional Details</legend>
+      
         <textarea  onChange={handleChange} id="message" name="AdditionalDetails" rows="5" placeholder={data[0].AdditionalDetails}></textarea>
-    </div>
+    </fieldset>
    
 {/* --------------------------------------------------------------------------- */}
 <div className="btnn">
@@ -300,8 +301,7 @@ alert("Trip Deleted Successfully")
 
 
 
-<MailList/>
-<Footer/>
+
     </>
   )
 }

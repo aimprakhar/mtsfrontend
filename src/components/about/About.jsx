@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom'
 const About = () => {
   return (
     <> 
-    <Nav/>
+   
     <div className='About'> 
        {/* -------------------------------------------------------------------------- */}
         <div className="About11">
@@ -76,8 +76,7 @@ const About = () => {
      
         
         </div>
-        <MailList/>
-        <Footer/>
+      
         </>
   )
 }

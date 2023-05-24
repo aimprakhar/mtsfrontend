@@ -11,6 +11,8 @@ import PulseLoader from "react-spinners/PulseLoader";
 import { Footer } from '../Footer/Footer';
 import { MailList } from '../mailList/MailList';
 import { format, getTime } from 'date-fns';
+import { faBed } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 var p=10;
 
 const Form =() => {
@@ -88,9 +90,9 @@ const call1=()=>{
   return (
     <> 
 
-     <Nav/>
+     {/* <Nav/> */}
    {/* <Navbar/> */}
-   <Header type="list" />
+   {/* <Header type="list" /> */}
 
 
    
@@ -106,76 +108,92 @@ const call1=()=>{
 
 
 
-    <div className="form-control">
-        <label htmlFor="tripcode1">Trip Code</label>
+<fieldset className='fields'> 
+  <legend htmlFor="Mode">Trip Code</legend>
+     
         <input  id="tripcode1" name=" Trip_Number" type="text" value={"TRIP"+bb+("             (not editable)")} />
-    </div>
+    </fieldset>
 
 
 {/* --------------------------------------------------------------------------------- */}
-<div className="form-control">
-        <label htmlFor="from"><span className='red'>*</span>Starting Location of Trip</label>
+<fieldset className='fields'> 
+  <legend htmlFor="Mode"><span className='red'>*</span>Starting Location of Trip</legend>
+       
         <input onChange={handleChange} id="from" name="From" type="text" />
-    </div>
+    </fieldset>
 {/* --------------------------------------------------------------------------- */}
-<div className="form-control">
-        <label htmlFor="to"><span className='red'>*</span>Destination</label>
+<fieldset className='fields'> 
+  <legend ><span className='red'>*</span>Destination</legend>
+      
         <input onChange={handleChange} id="to" name="To" type="text" />
-    </div>
+    </fieldset>
 {/* --------------------------------------------------------------------------- */}
-<div className="form-control">
-        <label htmlFor="pass"><span className='red'>*</span>Set Password to Delete/Edit trip</label>
+<fieldset className='fields'> 
+  <legend ><span className='red'>*</span>Set Password to Delete/Edit trip</legend>
+       
         <input onChange={handleChange} id="pass" name="Trip_Password" type="text" />
-    </div>
+    </fieldset>
 {/* --------------------------------------------------------------------------- */}
 
 
-<div className="form-control">
-        <label htmlFor="date"><span className='red'>*</span>Date</label>
-        <input onChange={handleChange} id="date" name="Date" type="date" />
-    </div>
+<fieldset className='fields'> 
+  <legend ><span className='red'>*</span>Date</legend>
+       
+        <input onChange={handleChange} id="date" name="Date" type="date" style={{border:'0.001rem solid white'}}/>
+    </fieldset>
 {/* --------------------------------------------------------------------------- */}
 
-<div className="form-control">
-        <label htmlFor="name1">Full Name</label>
+<fieldset className='fields'> 
+  <legend >Full Name</legend>
+       
         <input onChange={handleChange} id="name1" name="Creater_Name" type="text" placeholder='optional'/>
-    </div>
+    </fieldset>
 {/* --------------------------------------------------------------------------- */}
-    <div className="form-control">
-        <label htmlFor="name2">Mobile or Instagram</label>
+<fieldset className='fields'> 
+  <legend >Mobile or Instagram</legend>
+      
         <input onChange={handleChange} id="name2" name="Creater_Mobile_number" type="text" placeholder='optional' />
-    </div>
+    </fieldset>
 {/* --------------------------------------------------------------------------- */}
-    <div className="form-control">
-        <label htmlFor="email">Email Address</label>
+<fieldset className='fields'> 
+  <legend htmlFor="Mode">Email Address</legend>
+       
         <input onChange={handleChange} id="email" name="Creater_Email" type="email" placeholder='optional'/>
-    </div>
+    </fieldset>
 {/* --------------------------------------------------------------------------- */}
 
 
-<div className="form-control">
-        <label htmlFor="max_people">Max People Allowed</label>
+<fieldset className='fields'> 
+  <legend htmlFor="Mode">Max People Allowed</legend>
+       
         <input onChange={handleChange} id="max_people" name="MaxPeople" type="text" placeholder='optional'/>
        
-    </div>
+    </fieldset>
 {/* --------------------------------------------------------------------------- */}
-<div className="form-control">
-        <label htmlFor="expenses">Approx Travel Expenses in Rs.</label>
+<fieldset className='fields'> 
+  <legend htmlFor="Mode">Appx Total Expense in Rs.</legend>
         <input onChange={handleChange} id="expenses" name="AppxTripExpenses" type="number" placeholder='optional'/>
-    </div>
+    </fieldset>
 {/* --------------------------------------------------------------------------- */}
-<div className="form-control">
-        <label htmlFor="Mode"><span className='red'></span>Mode of Transport</label>
+
+<fieldset className='fields'> 
+  <legend htmlFor="Mode">Mode of Transport</legend>
+
         <input onChange={handleChange} id="mode" name="Mode" type="text" placeholder='optional: Auto Bus Train Flight or..'/>
-    </div>
+</fieldset>
+   
+
 {/* --------------------------------------------------------------------------- */}
-    <div className="form-control">
-        <label htmlFor="message">Additional Details </label>
+<fieldset className='fields'> 
+  <legend htmlFor="Mode">Additional Details </legend>
+       
         <textarea  onChange={handleChange} id="message" name="AdditionalDetails" rows="5" placeholder='optional'></textarea>
-    </div>
+    </fieldset>
+
    
 {/* --------------------------------------------------------------------------- */}
 <div className="btnn">
+
 <button onClick={call1} className="btn1" type="reset">Reset</button>
 <button onClick={call2} className="btn2" type="submit">{btn} { spinner&&<PulseLoader color="#36d7b7" />}</button>
 </div>
@@ -186,7 +204,7 @@ const call1=()=>{
 </div>
 </div> 
 {/* <MailList/> */}
-<Footer/>
+{/* <Footer/> */}
 </>
   )
 }

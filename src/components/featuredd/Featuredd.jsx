@@ -34,7 +34,7 @@ export const Featuredd = ({type}) => {
 {loading?(
   <div className="RingLoader">
 <RingLoader color="#36d7b7" size="100px" />
-<p >Loading...</p>
+<p >{type==="all"?"Loading for All Trips":"Loading for Verified Trips"}</p>
 
 
 </div>
@@ -43,7 +43,8 @@ export const Featuredd = ({type}) => {
  
   ):(
  <>
-<span className='ghotu' onClick={reFetch}>{type==="all"?"All Trips":"Verified Trips"} <FontAwesomeIcon icon={faArrowDown} className="headerIcon"/></span>
+ {/* {type==="all"?"All Trips":"Verified Trips"} <FontAwesomeIcon icon={faArrowDown} className="headerIcon"/>*/}
+<span className='ghotu' onClick={reFetch}> </span>
 
  {
 
@@ -54,7 +55,7 @@ export const Featuredd = ({type}) => {
 
 
 
-  <h1 className='thatsall'>Thats All From Database</h1>
+  {/* <h1 className='thatsall'>Thats All From Database</h1> */}
  </>
 
 )}

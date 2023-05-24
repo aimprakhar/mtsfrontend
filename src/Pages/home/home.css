@@ -20,3 +20,51 @@ font-size: 20px;
     width:100vw;
    
 }
+
+
+.HomeForm{
+    border-radius: 1rem;;
+    /* padding:1rem; */
+    padding-bottom: 1rem;
+    background-color:rgb(195, 249, 249);
+margin-top: 7rem;
+}
+.HomeEdit2{
+    border-radius: 1rem;
+    padding:1rem;
+    background-color:rgb(195, 249, 249);
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.HomeVerified{
+    border-radius: 1rem;
+    padding-bottom: 1rem;
+    background-color:rgb(195, 249, 249);
+    margin-top: 1rem;
+}
+.HomeRental{
+    border-radius: 1rem;
+    /* padding:1rem; */
+    padding-bottom: 1rem;
+    background-color:rgb(195, 249, 249);
+    margin-top: 1rem;
+}
+
+.HomeContact{
+    border-radius: 1rem;
+    /* padding:1rem; */
+    padding-bottom: 1rem;
+    background-color:rgb(195, 249, 249);
+    margin-top: 1rem;
+}
+
+
+.cent{
+    display: block;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}

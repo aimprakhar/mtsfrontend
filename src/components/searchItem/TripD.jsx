@@ -3,7 +3,7 @@ import {useNavigate } from 'react-router-dom';
 import "./searchItem.css"
 import { Link } from 'react-router-dom';
 import p from "./png1.png"
-import { faIndianRupee } from '@fortawesome/free-solid-svg-icons';
+import { faCheck, faIndianRupee, faMultiply } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
@@ -75,7 +75,7 @@ alert(err);
     
     <div className='searchItem' >
       <div className='tyu'>
-      <span className={status}> {item.verified==="true"?"Verified":"Not Verified"}</span>
+      <span className={status}> {item.verified==="true"?(<><span>Verified</span><FontAwesomeIcon icon={faCheck}/></>):(<><span>Not Verified </span><FontAwesomeIcon icon={faMultiply}/></>)}</span>
 <img src={p} alt="" className='siImg'/>
 </div>
 <div className='div11'>
