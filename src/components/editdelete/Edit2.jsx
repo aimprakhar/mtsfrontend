@@ -286,7 +286,7 @@ alert("Trip Deleted Successfully")
     
       <div className="RingLoader">
        
-            <p >If Trip found,it will show here and you can delte or edit your Trip </p>
+            <p >If Trip found,it will show here </p>
       
       
           </div>
