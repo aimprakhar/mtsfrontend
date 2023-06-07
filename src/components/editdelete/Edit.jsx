@@ -108,7 +108,7 @@ const navigate=useNavigate();
 const handledelete=async(e)=>{
   e.preventDefault();
   let passd="2";
-  passd=prompt("Enter Password of your Trip to delete it")
+  passd=prompt("Enter TripPassWord of your Trip to delete it")
   if(passd=="11mts22"||passd==data[0].Trip_Password){
    
   // try{const res=await axios.delete(`${local}/hotels/${data[0]._id}`);

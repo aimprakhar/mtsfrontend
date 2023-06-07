@@ -89,7 +89,7 @@ const Form =() => {
       "userEmail":inputs.Creater_Email||"aim.prakhar@gmail.com",
       "TripCode":inputs.Trip_Number||"Trip000000000000000",
       "TripPassWord":inputs.Trip_Password||"HFGDFDGHh",
-      "TripLink":`https://www.mytripsaathi.com/#/${inputs.Trip_Number}`,
+      "TripLink":`https://www.mytripsaathi.com/#/f/${inputs.Trip_Number}`,
       "Name":inputs.Creater_Name||"UnNamed User"
       
     
@@ -164,7 +164,7 @@ const call1=()=>{
     </fieldset>
 {/* --------------------------------------------------------------------------- */}
 <fieldset className='fields'> 
-  <legend ><span className='red'>*</span>Set Password to Delete/Edit trip</legend>
+  <legend ><span className='red'>*</span>TripPassWord: to Delete/Edit trip</legend>
        
         <input onChange={handleChange} id="pass" name="Trip_Password" type="text" />
     </fieldset>
