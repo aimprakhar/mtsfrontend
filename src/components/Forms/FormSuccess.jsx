@@ -47,7 +47,9 @@ const [dates, setdates] = useState([
 
 
    
-    <h4> <FontAwesomeIcon icon={faCheck} className='check' /> Your trip details are submitted successfully with folowing inputs
+    <h4> <FontAwesomeIcon icon={faCheck} className='check' /> <span></span>Email has been sent on your Email-ID with Tripcode, TripPassWord,TripLink 
+    <br />
+    <FontAwesomeIcon icon={faCheck} className='check' /> <span></span>Trip created successfully with following data
     <div className='maindivv'>
     <span className='span'>Trip Code:</span>{inputs[0].Trip_Number}
     <br />

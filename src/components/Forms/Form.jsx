@@ -71,7 +71,8 @@ const Form =() => {
 // try{const res=await axios.post("http://localhost:8700/api/hotels",inputs);
 
    navigate("/FormSuccess", {state:{inputs}})
-}
+  }
+
    catch(err){
     Onspinner(false);
     setBtn("RESUBMIT");
@@ -79,6 +80,40 @@ const Form =() => {
     
         // console.log(err );
    }
+// ---------------------------------------------------------NODEMAILER------------------------------------------------------------------------------------------------
+  
+  
+  const inputs2={
+   
+    
+      "userEmail":inputs.Creater_Email||"aim.prakhar@gmail.com",
+      "TripCode":inputs.Trip_Number||"Trip000000000000000",
+      "TripPassWord":inputs.Trip_Password||"HFGDFDGHh",
+      "TripLink":`https://www.mytripsaathi.com/#/${inputs.Trip_Number}`,
+      "Name":inputs.Creater_Name||"UnNamed User"
+      
+    
+  }
+   
+    event.preventDefault();
+ 
+
+try{const res=await axios.post("https://pramailb.onrender.com/api/product/getbill",inputs2);
+// try{const res=await axios.post("http://localhost:5000/api/product/getbill",inputs);
+
+
+}
+   catch(err){
+
+    alert(err)
+    
+         console.log(err );
+   }
+   
+  
+// ---------------------------------------------------------NODEMAILER------------------------------------------------------------------------------------------------
+
+   
    
   }
 
@@ -111,7 +146,7 @@ const call1=()=>{
 <fieldset className='fields'> 
   <legend htmlFor="Mode">Trip Code</legend>
      
-        <input  id="tripcode1" name=" Trip_Number" type="text" value={"TRIP"+bb+("             (not editable)")} />
+        <input  id="tripcode1" name="Trip_Number" type="text" value={"TRIP"+bb+("             (not editable)")} />
     </fieldset>
 
 

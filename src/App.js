@@ -17,6 +17,8 @@ import Comp from './Pages/Comp';
 import Edit from './components/editdelete/Edit';
 import Edit2 from './components/editdelete/Edit2';
 
+import Test from './components/Test';
+
 
 
 
@@ -64,7 +66,7 @@ function App() {
      <Route path="/f/:tripN" element={<SearchitemD/>}/>
      <Route path="comp" element={<Comp root="form"/>}/>
      
- 
+     <Route path="test" element={<Test/>}/>
      
 
     
