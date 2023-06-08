@@ -81,7 +81,7 @@ const Form =() => {
         // console.log(err );
    }
 // ---------------------------------------------------------NODEMAILER------------------------------------------------------------------------------------------------
-  
+  if(inputs.Creater_Email!=""){
   
   const inputs2={
    
@@ -110,7 +110,7 @@ try{const res=await axios.post("https://pramailb.onrender.com/api/product/getbil
          console.log(err );
    }
    
-  
+  }
 // ---------------------------------------------------------NODEMAILER------------------------------------------------------------------------------------------------
 
    
@@ -193,7 +193,7 @@ const call1=()=>{
 <fieldset className='fields'> 
   <legend htmlFor="Mode">Email Address</legend>
        
-        <input onChange={handleChange} id="email" name="Creater_Email" type="email" placeholder='optional'/>
+        <input onChange={handleChange} id="email" name="Creater_Email" type="email" placeholder='optional but you will get trip credentials via mail'/>
     </fieldset>
 {/* --------------------------------------------------------------------------- */}
 
