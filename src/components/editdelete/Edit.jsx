@@ -111,8 +111,8 @@ const handledelete=async(e)=>{
   passd=prompt("Enter TripPassWord of your Trip to delete it")
   if(passd=="11mts22"||passd==data[0].Trip_Password){
    
-  // try{const res=await axios.delete(`${local}/hotels/${data[0]._id}`);
-  try{const res=await axios.put(`${local}/hotels/edit/${data[0]._id}`,{status:"deleted"});
+  try{const res=await axios.delete(`${local}/hotels/${data[0]._id}`);
+  // try{const res=await axios.put(`${local}/hotels/edit/${data[0]._id}`,{status:"deleted"});
  
  
 alert("Trip Deleted Successfully")

@@ -78,11 +78,10 @@ const Form =() => {
     setBtn("RESUBMIT");
     alert(err)
     
-        // console.log(err );
+    
    }
 // ---------------------------------------------------------NODEMAILER------------------------------------------------------------------------------------------------
-  if(inputs.Creater_Email!=""){
-  
+  if(inputs.Creater_Email){
   const inputs2={
    
     
@@ -177,6 +176,12 @@ const call1=()=>{
         <input onChange={handleChange} id="date" name="Date" type="date" style={{border:'0.001rem solid white'}}/>
     </fieldset>
 {/* --------------------------------------------------------------------------- */}
+<fieldset className='fields'> 
+  <legend htmlFor="Mode">Email Address</legend>
+       
+        <input onChange={handleChange} id="email" name="Creater_Email" type="email" placeholder='optional but you will get trip credentials via mail'/>
+    </fieldset>
+{/* --------------------------------------------------------------------------- */}
 
 <fieldset className='fields'> 
   <legend >Full Name</legend>
@@ -190,12 +195,7 @@ const call1=()=>{
         <input onChange={handleChange} id="name2" name="Creater_Mobile_number" type="text" placeholder='optional' />
     </fieldset>
 {/* --------------------------------------------------------------------------- */}
-<fieldset className='fields'> 
-  <legend htmlFor="Mode">Email Address</legend>
-       
-        <input onChange={handleChange} id="email" name="Creater_Email" type="email" placeholder='optional but you will get trip credentials via mail'/>
-    </fieldset>
-{/* --------------------------------------------------------------------------- */}
+
 
 
 <fieldset className='fields'> 
