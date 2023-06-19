@@ -9,7 +9,8 @@
     /* background-color: #800042; */
     /* background-color: rgb(249, 66, 97); */
     /* background-image: linear-gradient(to bottom right,rgb(249, 66, 97),rgb(249, 66, 47),rgb(249, 66, 97)); */
-    background-image: linear-gradient(to bottom,#dd4a4c,#ec696b,#dd4a4c);
+     background-image: linear-gradient(to bottom,#dd4a4c,#ec696b,#dd4a4c); 
+     /* background-color:rgb(206, 245, 245) ; */
     /* background-image:white; */
 opacity: 99%;
     
@@ -19,7 +20,7 @@ opacity: 99%;
     position:relative;
     top:70px;
     width:100vw;
-
+height:73vh;
   
 }
 

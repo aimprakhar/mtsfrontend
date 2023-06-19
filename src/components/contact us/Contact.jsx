@@ -29,7 +29,8 @@ const Contact = () => {
       const [spinner,Onspinner]=useState(false);
 
       const call1=()=>{
-        setBtn("Create Your Trip");
+        Onspinner(false);
+        setBtn("Submit");
     }
 
 

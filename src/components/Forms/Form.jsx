@@ -117,6 +117,7 @@ try{const res=await axios.post("https://pramailb.onrender.com/api/product/getbil
   }
 
 const call1=()=>{
+  Onspinner(false);
     setBtn("Create Your Trip");
 }
 

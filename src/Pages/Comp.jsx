@@ -63,11 +63,11 @@ const Comp = ({root}) => {
    <Nav/>
  <Header type="list"/>
     <div className="Comp">
-  { root==="contact"?(<div></div>): ( rot )}
+  {  ( rot )}
     </div>
      
-    <Contact/>
-    <Footer/>
+
+   {(root==="about"||root==="form")?(<Footer/>):(<div/>)} 
     </>
   )
 }

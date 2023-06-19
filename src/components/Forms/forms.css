@@ -9,12 +9,12 @@
     padding :0.2%;
  
    
-    background-color:rgb(206, 245, 245);
+    /* background-color:rgb(206, 245, 245); */
     max-width: 1193px;
 
 
     border-radius: 0.8rem;
-    box-shadow: -0.25rem 0.50rem rgba(0,0,0,.15)!important;
+    box-shadow: 0px 0px 20px 20px rgb(206, 245, 245) inset;
 
 }
 
@@ -38,7 +38,7 @@
     /* border-radius: 5px;; */
     width:100%;
     /* text-align: center; */
-    background-color:rgb(206, 245, 245);
+    /* background-color:rgb(206, 245, 245); */
        /* background-color:rgb(246, 245, 245); */
     color:rgb(107, 107, 249);
 
@@ -46,7 +46,7 @@
   
 }
 .btn1{
-    background-color:rgb(206, 245, 245);
+    /* background-color:rgb(206, 245, 245); */
     border: 0.1rem solid #dd4a4c;
      flex:1;
  
@@ -55,7 +55,7 @@
      
      color:#dd4a4c;
     height:40px;
-  
+    background-color:white;
     border-radius:0.5rem;
    margin-top: 1%;
 }
@@ -71,7 +71,7 @@ max-width: 500px;
 }
 .btn2{
     flex:5;
-    background-color:rgb(206, 245, 245);
+    background-color:white;
     /* background-color: green; */
     text-align: center;
     border: 0.1rem solid rgb(31, 195, 31) !important;
@@ -87,7 +87,7 @@ max-width: 500px;
 
 textarea{
     color:rgb(107, 107, 249);
-    background-color:rgb(206, 245, 245);
+    /* background-color:rgb(206, 245, 245); */
 width:100%;
 
 border: none;

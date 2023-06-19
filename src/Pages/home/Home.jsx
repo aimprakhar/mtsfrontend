@@ -46,9 +46,7 @@ export const Home = () => {
         <RentalF/>
         </div>
 
-        <div className="HomeContact">
-                <Contact/> 
-        </div>
+        
        
       
         {/* <div className="homeContainer">
@@ -59,8 +57,8 @@ export const Home = () => {
         <h1 className='homeTitle'>Home Guests Love</h1>
          <FeaturedProperties/> 
         <MailList/>
-        // <Footer/>
-       </div> */}
+         <Footer/>
+       </div> }
         {/* <MailList/> */}
        <Footer/>  
     </div>

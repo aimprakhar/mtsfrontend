@@ -24,31 +24,42 @@ font-size: 20px;
 
 .HomeForm{
     border-radius: 1rem;;
-    /* padding:1rem; */
-    padding-bottom: 1rem;
-    background-color:rgb(195, 249, 249);
+     padding-bottom:0.1rem;
+
+    box-shadow: 0px 0px 47px -10px grey;
+      margin-left:10px;
+     margin-right:10px; 
+    /* background-color:rgb(195, 249, 249); */
 margin-top: 7rem;
 }
 .HomeEdit2{
     border-radius: 1rem;
     padding:1rem;
-    background-color:rgb(195, 249, 249);
+    /* background-color:rgb(195, 249, 249); */
     margin-top: 1rem;
     padding-bottom: 1rem;
+    box-shadow: 0px 0px 47px -10px grey;
+    margin-left:10px;
+    margin-right:10px; 
 }
 
 .HomeVerified{
     border-radius: 1rem;
     padding-bottom: 1rem;
-    background-color:rgb(195, 249, 249);
+    /* background-color:rgb(195, 249, 249); */
     margin-top: 1rem;
+    box-shadow: 0px 0px 47px -10px grey;
+    
 }
 .HomeRental{
     border-radius: 1rem;
     /* padding:1rem; */
     padding-bottom: 1rem;
-    background-color:rgb(195, 249, 249);
+    /* background-color:rgb(195, 249, 249); */
     margin-top: 1rem;
+    box-shadow: 0px 0px 47px -10px grey;
+    margin-left:10px;
+    margin-right:10px; 
 }
 
 .HomeContact{
@@ -57,6 +68,8 @@ margin-top: 7rem;
     padding-bottom: 1rem;
     background-color:rgb(195, 249, 249);
     margin-top: 1rem;
+    /* box-shadow: 10px 20px 50px 15px rgb(206, 245, 245); */
+    /* margin:25px; */
 }
 
 
@@ -67,4 +80,5 @@ margin-top: 7rem;
     margin-right: auto;
     font-weight: bold;
     margin-bottom: 1rem;
+    
 }
