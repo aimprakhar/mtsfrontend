@@ -20,7 +20,7 @@ opacity: 99%;
     position:relative;
     top:70px;
     width:100vw;
-height:73vh;
+
   
 }
 
@@ -28,10 +28,11 @@ height:73vh;
 width:100vw;
 max-width:1024px;
  margin:20px 0px 70px 0px;
+ height:73vh;
 }
 
 .listMode{
-   height:1vh
+   height:1vh!important;
     /* margin:20px 0px 0px 0px; */
 }
 
