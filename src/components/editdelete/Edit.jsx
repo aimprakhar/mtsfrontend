@@ -28,8 +28,8 @@ const [tripCode,setTripCode]=useState(Ttn||"")
 // ---------------------------Form---------------------------
 const navigate=useNavigate();
   const [inputs, setInputs] = useState({});
-  const [btn1,setBtn1]=useState("Delete");
-  const [btn2,setBtn2]=useState("Edit");
+  const [btn1,setBtn1]=useState("Delete It");
+  const [btn2,setBtn2]=useState("Edited? Save It");
   const [spinner,Onspinner]=useState(false);
 
   const handleChange = (event) => {
