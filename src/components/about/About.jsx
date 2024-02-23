@@ -18,7 +18,7 @@ const About = () => {
             About Us:
             <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="yaha hu" />
             <div className='About111'>
-            <p><span className='red'>Developer</span>:Prakhar Shukla</p>
+            <p><span className='red'>Developer</span>:NIT Agartala Team</p>
          <p><span className='red'>Course</span>:B.Tech(2020-2024)</p>
          <p><span className='red'>College</span>:NIT Agartala(2020-2024)</p>
 
