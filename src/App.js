@@ -40,6 +40,8 @@ function App() {
    {/* --------------------------------------------------------------- */}
       {/* Components */}
      <Route path="/about" element={<Comp root="about"/>}/>
+     <Route path="/calc" element={<Comp root="calc"/>}/>
+     <Route path="/carloan" element={<Comp root="carloan"/>}/>
      <Route path="/form" element={<Comp root="form"/>}/>
      <Route path="/edit" element={<Comp root="edit"/>}/>
      

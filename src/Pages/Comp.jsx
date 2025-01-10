@@ -16,11 +16,19 @@ import { RentalF } from '../components/featuredd/RentalF';
 
 import { Featuredd } from '../components/featuredd/Featuredd';
 import Edit2 from '../components/editdelete/Edit2';
+import CalculatorForm from '../components/calculator/CalculatorForm';
+import CarLoan from '../components/carLoan/CarLoan';
 const Comp = ({root}) => {
     let rot=<Home/>;
  
     if(root==="about"){
         rot=<About/>
+    }
+    else if(root==="calc"){
+        rot=<CalculatorForm/>
+    }
+    else if(root==="carloan"){
+        rot=<CarLoan/>
     }
 
     else if(root==="contact"){
@@ -52,6 +60,7 @@ const Comp = ({root}) => {
     else if(root==="join"){
         rot= <Featuredd type="all"/>
     }
+    
 
     else {
         rot=<Home/>
