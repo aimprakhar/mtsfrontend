@@ -171,9 +171,9 @@ function CalculatorForm() {
         <button type="button" onClick={handleReset}>Reset</button>
       </form>
 
-      <h2>Final Price/N: {result}</h2>
-      <h2>MIN Price/N: {minn}</h2>
-      <h2>MAX Price/N: {maxx}</h2>
+      <h2>Final Price/N: {result/input2}</h2>
+      <h2>MIN Price/N: {minn/input2}</h2>
+      <h2>MAX Price/N: {maxx/input2}</h2>
     </div>
   );
 }
