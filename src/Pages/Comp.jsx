@@ -18,6 +18,7 @@ import { Featuredd } from '../components/featuredd/Featuredd';
 import Edit2 from '../components/editdelete/Edit2';
 import CalculatorForm from '../components/calculator/CalculatorForm';
 import CarLoan from '../components/carLoan/CarLoan';
+import PersonSearch from '../components/personSearch/PersonSearch';
 const Comp = ({root}) => {
     let rot=<Home/>;
  
@@ -26,6 +27,9 @@ const Comp = ({root}) => {
     }
     else if(root==="calc"){
         rot=<CalculatorForm/>
+    }
+    else if(root==="personSearch"){
+        rot=<PersonSearch/>
     }
     else if(root==="carloan"){
         rot=<CarLoan/>
