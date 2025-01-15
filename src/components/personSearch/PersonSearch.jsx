@@ -10,7 +10,7 @@ const initialPeople = [
   { name: 'Bob', qualities: { kindness: 'medium', intelligence: 'low', honesty: 'high' } },
   { name: 'Charlie', qualities: { kindness: 'low', intelligence: 'medium', honesty: 'medium' } }
 ];
-const p=0;//1 for server
+const p=1;//1 for server
 const backendUrl=p===1?"https://mtsbackend.onrender.com/api":"http://localhost:8700/api";
 
 const PersonSearch = () => {
