@@ -243,7 +243,7 @@ const PersonSearch = () => {
       </div>
 
       {/* Filtered List of People */}
-      <div>
+      <div style={{width:'50%'}}>
         <h2>Filtered People:</h2>
         {filteredPeople.length === 0 ? (
           <p>No matches found</p>
@@ -252,11 +252,17 @@ const PersonSearch = () => {
               <>
 <div className="RentalS">
                 <div className="R12">
-                  <strong>Name:{person.name}</strong>
-                  {Object.entries(person.qualities).map(([qualityName, qualityValue]) => (
-                    <span key={qualityName}> {qualityName}: {qualityValue};</span>
-                  ))}
+                    <span>
+                      <strong><center>{"<<"+person.name+">>"}</center></strong>
+                      <br />
+                      {Object.entries(person.qualities).map(([qualityName, qualityValue]) => (
+                        <span>
+                        <span key={qualityName}> {qualityName}: {qualityValue};</span>
+                        <br />
+                        </span>
 
+                      ))}
+                    </span>
                 </div>
                 </div>
               </>
