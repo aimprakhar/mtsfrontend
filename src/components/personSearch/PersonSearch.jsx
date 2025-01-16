@@ -248,22 +248,26 @@ const PersonSearch = () => {
         {filteredPeople.length === 0 ? (
           <p>No matches found</p>
         ) : (
-          <ul>
-            {filteredPeople.map((person, index) => (
-              <li key={index}>
-                <strong>{person.name}</strong>: 
-                {Object.entries(person.qualities).map(([qualityName, qualityValue]) => (
-                  <span key={qualityName}> {qualityName}: {qualityValue};</span>
-                ))}
-              </li>
-            ))}
-          </ul>
+            filteredPeople.map((person, index) => (
+              <>
+<div className="RentalS">
+                <div className="R12">
+                  <strong>Name:{person.name}</strong>
+                  {Object.entries(person.qualities).map(([qualityName, qualityValue]) => (
+                    <span key={qualityName}> {qualityName}: {qualityValue};</span>
+                  ))}
+
+                </div>
+                </div>
+              </>
+            ))
+
         )}
       </div>
 
-      <div>
-        <textarea name="" data={data} id=""></textarea>
-      </div>
+      {/* <div>
+        <textarea name="" data={loading?"":data} id=""></textarea>
+      </div> */}
     </div>
   );
 };

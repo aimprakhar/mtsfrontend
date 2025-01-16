@@ -1,31 +1,32 @@
 /* CSS file: PersonSearch.css */
 
+
+
 .search-container {
-    display: flex;                /* Use Flexbox for horizontal layout */
-    justify-content: center; /* Space out the inputs and button */
-    align-items: center;          /* Vertically center the elements */
-    gap: 10px;                    /* Add some space between inputs and button */
-    margin-bottom: 20px;          /* Space between search bar and results */
-  }
-  
-  .search-container input {
-    padding: 8px 12px;             /* Add padding for better usability */
-    font-size: 14px;               /* Set font size */
-    width: 150px;                  /* Set a fixed width for inputs */
-  }
-  
-  .search-container button {
-    padding: 8px 15px;             /* Add padding for button */
-    font-size: 14px;               /* Set font size */
-    cursor: pointer;              /* Show pointer cursor on hover */
-    background-color: #007bff;    /* Set button background color */
-    color: white;                 /* Set button text color */
-    border: none;                 /* Remove default button border */
-    border-radius: 4px;           /* Rounded corners */
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
-  }
-  
-  .search-container button:hover {
-    background-color: #0056b3;    /* Darken the button color on hover */
-  }
-  
+  display: flex;                /* Use Flexbox for horizontal layout */
+  justify-content: center; /* Space out the inputs and button */
+  align-items: center;          /* Vertically center the elements */
+  gap: 10px;                    /* Add some space between inputs and button */
+  margin-bottom: 20px;          /* Space between search bar and results */
+}
+
+.search-container input {
+  padding: 8px 12px;             /* Add padding for better usability */
+  font-size: 14px;               /* Set font size */
+  width: 150px;                  /* Set a fixed width for inputs */
+}
+
+.search-container button {
+  padding: 8px 15px;             /* Add padding for button */
+  font-size: 14px;               /* Set font size */
+  cursor: pointer;              /* Show pointer cursor on hover */
+  background-color: #007bff;    /* Set button background color */
+  color: white;                 /* Set button text color */
+  border: none;                 /* Remove default button border */
+  border-radius: 4px;           /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.search-container button:hover {
+  background-color: #0056b3;    /* Darken the button color on hover */
+}
