@@ -80,6 +80,15 @@ const navigate=useNavigate()
     <li onClick={chk}>
         <Link to={"/about"}>About Us</Link>
     </li>
+    <li onClick={chk}>
+        <Link to={"/personSearch"}>Person</Link>
+    </li>
+
+    <li onClick={chk}>
+        <Link to={"/calc"}>Calculate</Link>
+    </li>
+
+
   
     <li onClick={chk}>
       
