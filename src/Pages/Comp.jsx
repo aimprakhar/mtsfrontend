@@ -19,6 +19,7 @@ import Edit2 from '../components/editdelete/Edit2';
 import CalculatorForm from '../components/calculator/CalculatorForm';
 import CarLoan from '../components/carLoan/CarLoan';
 import PersonSearch from '../components/personSearch/PersonSearch';
+import LoanCalculator from '../components/loanCalculator/LoanCalculator';
 const Comp = ({root}) => {
     let rot=<Home/>;
  
@@ -33,6 +34,9 @@ const Comp = ({root}) => {
     }
     else if(root==="carloan"){
         rot=<CarLoan/>
+    }
+    else if(root==="loanCalculator"){
+        rot=<LoanCalculator/>
     }
 
     else if(root==="contact"){

@@ -43,6 +43,7 @@ function App() {
      <Route path="/calc" element={<Comp root="calc"/>}/>
      <Route path="/personSearch" element={<Comp root="personSearch"/>}/>
      <Route path="/carloan" element={<Comp root="carloan"/>}/>
+     <Route path="/loanCalculator" element={<Comp root="loanCalculator"/>}/>
      <Route path="/form" element={<Comp root="form"/>}/>
      <Route path="/edit" element={<Comp root="edit"/>}/>
      
